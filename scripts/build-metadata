@@ -80,7 +80,7 @@ log() {
 		*)
 			echo -ne "$IAM (err): " 1>&2
 			echo -e "log level $logLevel doesn't exist." 1>&2
-			exit 1
+			exit 3
 	esac
 }
 
@@ -151,22 +151,22 @@ for GROUP in groups/*; do
 	# search for what we want. If the result is empty, error out.
 	if [ -z "`perl -ne 'print if /EntitiesDescriptor.*ID="UARK\d+T\d+"/' $UNSIGNED`" ]; then
 		log err "/EntitiesDescriptor/@ID fails pattern match"
-		exit 1
+		exit 2
 	fi
 
 	if [ -z "`perl -ne 'print if /EntitiesDescriptor.*validUntil="\d+-\d+-\d+T\d+:\d+:\d+Z"/' $UNSIGNED`" ]; then
 		log err "/EntitiesDescriptor/@validUntil fails pattern match"
-		exit 1
+		exit 2
 	fi
 
 	if [ -z "`perl -ne 'print if /EntitiesDescriptor.*cacheDuration="(?:[\-\+])?P(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)?S)?)"/' $UNSIGNED`" ]; then
 		log err "/EntitiesDescriptor/@cacheDuration fails pattern match"
-		exit 1
+		exit 2
 	fi
 
 	if [ -z "`perl -ne 'print if /EntitiesDescriptor.*Name=".*uark\.edu.*$ENV{GROUP}/' $UNSIGNED`" ]; then
 		log err "/EntitiesDescriptor/@Name fails pattern match"
-		exit 1
+		exit 2
 	fi
 
 	## Checks passed.
@@ -210,8 +210,13 @@ done
 
 if [ -n "`find tmp -maxdepth 1 -name '*-metadata.xml' -print -quit`" ]; then
 	cp tmp/*-metadata.xml output
+else
+	log err "no metadata generated. aborting."
+	exit 1
 fi
 if [ -n "`find tmp -maxdepth 1 -name '*.pem' -print -quit`" ]; then
 	cp tmp/*.pem output
+else
+	log notice "no certificates used. all metadata is unsigned."
 fi
 log notice "finished files in output"
