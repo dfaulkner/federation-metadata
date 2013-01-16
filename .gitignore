@@ -1,0 +1,10 @@
+# ignore files in the following directories, except for a README
+
+keys/*
+!keys/README
+
+output/*
+!output/README
+
+tmp/*
+!tmp/README
