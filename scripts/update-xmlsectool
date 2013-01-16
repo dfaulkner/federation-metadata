@@ -30,6 +30,12 @@ VENDOR="vendor"
 
 git checkout $VENDOR
 
+## start in the right directory. 
+## This script should live in the scripts/ sub directory.
+## We want to execute there.
+
+cd `dirname "$0"`
+
 ## get the new xmlsectool
 wget -e robots=off -r -nd -np -A .zip "$URL"
 VERSION=`basename xmlsectool*.zip -bin.zip`
