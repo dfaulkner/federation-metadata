@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 # update-xmlsectool: download the latest xmlsectool and update the repository.
 # Don Faulkner <donf@uark.edu>
 
