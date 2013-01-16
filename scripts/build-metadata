@@ -56,7 +56,7 @@ ID=$(date -u "+UARK%Y%m%dT%H%M%S")
 VALID_UNTIL=$(date -u -d "$VALID" "+%Y-%m-%dT%H:%M:%SZ")
 
 ## Path to xmlsectool
-XMLSECTOOL=/home/quux/Downloads/xmlsectool-1.1.5/xmlsectool.sh
+XMLSECTOOL=scripts/xmlsectool/xmlsectool.sh
 
 log() {
 	local logLevel=$1
