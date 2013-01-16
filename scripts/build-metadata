@@ -95,7 +95,7 @@ cd `dirname "$0"`
 cd ..
 
 ## make sure we have the latest changes from the repository
-#git pull
+git pull
 
 ## make sure that all the working directories exist
 
