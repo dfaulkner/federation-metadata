@@ -51,7 +51,7 @@ mv xmlsectool-* xmlsectool
 
 ## add changes and commit to vendor branch
 git add xmlsectool
-git commit -a -m "Vendor update: $VERSION"
+git commit -a -m "upstream update: $VERSION"
 git tag "$VERSION"
 
 ## merge the vendor branch back into master
