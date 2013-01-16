@@ -206,7 +206,12 @@ done
 ## At this point, we've iterated over all /groups/* directories.
 ## tmp contains an -unsigned-metadata and a -metadata file for each GROUP.
 ## All that's left is to copy the (signed) -metadata files to output
+## as well as any certificates used for signing.
 
-cp tmp/*-metadata.xml output
-cp tmp/*.pem output
+if [ -n "`find tmp -maxdepth 1 -name '*-metadata.xml' -print -quit`" ]; then
+	cp tmp/*-metadata.xml output
+fi
+if [ -n "`find tmp -maxdepth 1 -name '*.pem' -print -quit`" ]; then
+	cp tmp/*.pem output
+fi
 log notice "finished files in output"
