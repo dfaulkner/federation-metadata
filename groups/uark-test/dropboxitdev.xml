@@ -1,0 +1,67 @@
+
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_e28cece1e02e523ef4bef4fff5d5b46c74c0c83e" entityID="https://dropboxit.uark.edu/shibboleth">
+
+  <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+  </md:Extensions>
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>dit.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=dit.uark.edu</ds:X509SubjectName>
+          <ds:X509Certificate>MIIC6zCCAdOgAwIBAgIJAPZ/maJ2kgPtMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDGRpdC51YXJrLmVkdTAeFw0xMjA5MTMxOTA1MjZaFw0yMjA5MTExOTA1MjZa
+MBcxFTATBgNVBAMTDGRpdC51YXJrLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBAM0c3ksf7k/Tv7IzB8I/cN327OrJJkDF1dN8j/VZamIxoPyJwjaN
+fWHyDGdwyRA/zvFjOUskVMVyKH98sM8tOySm8EJNWlRcUyVD5s+8h15XwAnEARhA
+B5qPeyNasAcKW6ZOxlaBRqXxMWmPd2n19qGxzfZbbk+Ez5vOHawGH7qB3OSNU4+p
+ZJayax49tdxf2DWvRM6dzZCkk0U1tblwkW2Wmmh4w1tRoI16Yqo0OveUZOrHP1r8
+oIzO/taDnC8ncm92++FaToSI/kZaH+p4Z/QfXHcJymWfOGQBvfauz5wZOL1SA3r+
+1hiFViy3egvkrr0v6YflIr7iqcgjgQDB6PMCAwEAAaM6MDgwFwYDVR0RBBAwDoIM
+ZGl0LnVhcmsuZWR1MB0GA1UdDgQWBBSvl8dnqa6G+fBGYq6Sh2N3AHCWCjANBgkq
+hkiG9w0BAQUFAAOCAQEAhQip2d+PZuV/5kvTfV7vuPCHHyY7mhhXokbBWNjV4m75
+582VVT5ealusn+ffXM6cP/IuElyunwp12EvaghsVt2arOL81tMvkSYYQT5cAG225
+nhBdDKzGkOrf+wxYoMkPEeHpPkn/GlgpT6opoHZFRF3jzOmH+h7wRcAiJtjOG7u3
+aBXoXdPuhYrReXPzsBwdR8uCVaRUfEZu5VY2oDFnUpGSdwEVyFD5396EVaPvJZ+C
+POY7vH9t7DrgIV/4jJXM1BovqpuFeh29qgV0XGMd8GQGWDYHeDYeftrp/8QQmL/U
+yYDmwR0dZdbhALU/djCzNTGiAr7GZ6JltJvCW60h7A==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/Artifact/SOAP" index="1"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SAML/POST" index="5"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://dropboxitdev.uark.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+  </md:SPSSODescriptor>
+
+</md:EntityDescriptor>

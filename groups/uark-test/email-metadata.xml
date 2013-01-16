@@ -1,0 +1,49 @@
+
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_0e649f64fbaf70b0c3c9f4c7c51716d40e2f8f8b" entityID="https://email.uark.edu/shibboleth">
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://email.uark.edu/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://email.uark.edu/Shibboleth.sso/Login" index="1"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://email.uark.edu/Shibboleth.sso/Login" index="2"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://email.uark.edu/Shibboleth.sso/Login" index="3"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>webs.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=webs.uark.edu</ds:X509SubjectName>
+          <ds:X509Certificate>MIIC7jCCAdagAwIBAgIJAIbsFOVu+ctCMA0GCSqGSIb3DQEBBQUAMBgxFjAUBgNV
+BAMTDXdlYnMudWFyay5lZHUwHhcNMTIwNDAzMjAyNTUyWhcNMjIwNDAxMjAyNTUy
+WjAYMRYwFAYDVQQDEw13ZWJzLnVhcmsuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAwgwMCMgJuhcvyA4JBujfyUPZDYTRyIeFCPpCUWzEtIVBC0Zm
+hgPSBtS2KoPNNgfhNdCr3nS/Z+jcB1nLUbAVPhHx1subsGFErBw75E0Muu1OzA+r
++Gd20Oj0Uz5y2WsA/d+0EuSU970CCsul6D+n+cJ1mBM6tilECNSlDiDgxH7EXsKV
+aNwn+uoE1tndoVse5/j4HsDnrACjXhn4F3KyXWKW4bxzusIBVMkNOr1VJMqEcCrJ
+zTmzR/F9wnX29p18T05wC9VmAua/U+jNRevJ5+9WX/E6fjC34GHlP/PNUk9qGETm
+jHQPRgZPN7ZyxtsQoJz+nRqSqVdMWj3TxOX05wIDAQABozswOTAYBgNVHREEETAP
+gg13ZWJzLnVhcmsuZWR1MB0GA1UdDgQWBBSaSHTy9GkHat7HgU1i7QA1u6VzUzAN
+BgkqhkiG9w0BAQUFAAOCAQEAaH1Pnptyuli0mA3WGEYUc/l35TLjHk1M2vsWniwv
+knz+haoAZujush996MuXaet8V/OussJ/EShWAQLKqzuRIenofhVn2u4aAudWEtAT
+NtlDt0IHnAwulOETx2gCJyuZNkz0UFyCuHZtkd8Mbl8iBXF/I1UvHvD23YtYTUms
+jmSM+vq8DW5qJpHpG1Tw3LUvy3CCZxMZVeWd+xl7F9Z8THL+xKXujCQwwH2ayUFq
+1boGYhPGm//X8k3x6t08g3DXdl/PXKQTgMgqwiiFBxVMIlr3D5zz/WNOM/FWhNJP
+OpsidR+qEbMmPWB+Xhk9IWwcho3Fi6vmQcjB1s3LZlId5g==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://email.uark.edu/Shibboleth.sso/Artifact/SOAP" index="0"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://email.uark.edu/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://email.uark.edu/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://email.uark.edu/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://email.uark.edu/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://email.uark.edu/Shibboleth.sso/SAML2/POST" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://email.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://email.uark.edu/Shibboleth.sso/SAML2/Artifact" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://email.uark.edu/Shibboleth.sso/SAML2/ECP" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://email.uark.edu/Shibboleth.sso/SAML/POST" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://email.uark.edu/Shibboleth.sso/SAML/Artifact" index="5"/>
+  </md:SPSSODescriptor>
+
+</md:EntityDescriptor>

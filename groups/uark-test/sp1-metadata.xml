@@ -1,0 +1,53 @@
+
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_eec8f8bc9401063a271f5111a7592964e8586fd8" entityID="https://sp1.nerf.ddns.uark.edu/shibboleth">
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/Login"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>sp1.nerf.ddns.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>emailAddress=donf@uark.edu,CN=sp1.nerf.ddns.uark.edu,OU=IT Services,O=University of Arkansas,L=Fayetteville,ST=Arkansas,C=US</ds:X509SubjectName>
+          <ds:X509Certificate>MIIELzCCAxegAwIBAgIJAJ7gycKBy7/xMA0GCSqGSIb3DQEBBQUAMIGtMQswCQYD
+VQQGEwJVUzERMA8GA1UECAwIQXJrYW5zYXMxFTATBgNVBAcMDEZheWV0dGV2aWxs
+ZTEfMB0GA1UECgwWVW5pdmVyc2l0eSBvZiBBcmthbnNhczEUMBIGA1UECwwLSVQg
+U2VydmljZXMxHzAdBgNVBAMMFnNwMS5uZXJmLmRkbnMudWFyay5lZHUxHDAaBgkq
+hkiG9w0BCQEWDWRvbmZAdWFyay5lZHUwHhcNMTIwNDAyMjAwMjMxWhcNMTIwNTAy
+MjAwMjMxWjCBrTELMAkGA1UEBhMCVVMxETAPBgNVBAgMCEFya2Fuc2FzMRUwEwYD
+VQQHDAxGYXlldHRldmlsbGUxHzAdBgNVBAoMFlVuaXZlcnNpdHkgb2YgQXJrYW5z
+YXMxFDASBgNVBAsMC0lUIFNlcnZpY2VzMR8wHQYDVQQDDBZzcDEubmVyZi5kZG5z
+LnVhcmsuZWR1MRwwGgYJKoZIhvcNAQkBFg1kb25mQHVhcmsuZWR1MIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3QhYnBs36zA6KzAL+I89LUbHVIYXus7a
+e7+KqUOQrD/34V+oukUQoXIqFpEmNu1nYFCKxkQqRfcj/8TFRSHwiSMUBUfVcjqQ
+VooThy2UqYgTXtuM0l9lo4nlRAIa8yOn6k3039aFJjXaK2wfmTCsjVdZbPjxqGOs
+hTvT2Ntc65PjsIFbJis7ckWeXklD3tgTtX6smzmQo1ypBLIrThzpKAmXxrzsFxdl
+Q8Eg0jmjUHO6aXW702bd1SJcBH9Npesj3vGyuYfAblhQBocWeVv0oTMOtoxnInnG
+Y5m9C6jP+2kfQfUXKkf7QCIo78EIGCyx978rou8Q3smS6uZF/bpLGwIDAQABo1Aw
+TjAdBgNVHQ4EFgQUtIB0MRT94oVe824dcFfoysjsnvMwHwYDVR0jBBgwFoAUtIB0
+MRT94oVe824dcFfoysjsnvMwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOC
+AQEATAuPSPxbqF/QYnERVbeX2dpZtmatcx0lfBxBNIvWnHFjtD8Fr/RUP/AHV6fd
+8pUlD1j8fnQge2N568q3OlRUPSK/4XAMdVbhmf/FhWaLfO5l3cWB7QNLtY7J/bDA
+gPGYa41mYtCFiFbGc3iAjYbsn7nwPj+A0RVBwd9szG1wOwS/vNAAj9l6XdjdgnTu
+zfMyt3BPUPnNIG/If2leXJZsbiL58QUjrHFbhC/CoKZN5UN+d9jk38Vfi/dIxA1G
+GaMLIyNfpq+BnVhuKEIk8zhhjMh0IoZ+rtygxz1eDJ4nCjW13Y6K9m+EHQ5ljRsU
+daYzcPn+YLRCgSsP8xfHTNfcKQ==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/Artifact/SOAP" index="0"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SAML2/POST" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SAML2/Artifact" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SAML2/ECP" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SAML/POST" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="http://sp1.nerf.ddns.uark.edu/Shibboleth.sso/SAML/Artifact" index="5"/>
+  </md:SPSSODescriptor>
+
+</md:EntityDescriptor>

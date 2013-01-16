@@ -1,0 +1,45 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_fa0fb9b7120eaef7b65bacb7d2318e2a37dc462f" entityID="https://razorgrant.uark.edu/shibboleth-sp">
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://razorgrant.uark.edu/Shibboleth.sso/Login"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>kcprd.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=kcprd.uark.edu</ds:X509SubjectName>
+          <ds:X509Certificate>MIIC8TCCAdmgAwIBAgIJAOc/tIHVQFiNMA0GCSqGSIb3DQEBBQUAMBkxFzAVBgNV
+BAMTDmtjcHJkLnVhcmsuZWR1MB4XDTEyMDIyODIxMjg0N1oXDTIyMDIyNTIxMjg0
+N1owGTEXMBUGA1UEAxMOa2NwcmQudWFyay5lZHUwggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQCbJeM5aZcQ/l7F4Egg0kSe27gm5MYtoPrXyiP1hqef5Bg0
+YxW6y+wtxTRy3jeTGRZgFdKZo+Rro87c3OMMZ0uwGFNRlRja4DG/1byiUdZG4KWJ
+8TzuAlLBtlbsW/IYvDgHtfNpaRAgHljDlhyao0LfNPjs0ghhiAj7ltNLiX7pAw1g
++U0OTkMsDjg0qnMI2VxwEJ+p7Hc3zaAOX5padTxyv8Huv1fV6bSUrIh8WFSZaCrY
+nZMDFi5U27CUsLw815c7/MiGAhR1/DPNiCMsQd5C275IwksUugwZNsco35v8c5RX
+T9aiWZfxndbPk11LSPh7Pkp5UNtgtxaXDzn6fd3dAgMBAAGjPDA6MBkGA1UdEQQS
+MBCCDmtjcHJkLnVhcmsuZWR1MB0GA1UdDgQWBBR8PtWCRPjPBQ1vbFapbtrOg+00
++jANBgkqhkiG9w0BAQUFAAOCAQEAixkg/Bc74mN8aVIwSrtb/kwZ1vErgrnJ61Ht
+HjjD/jnQ7RVRBAbiip0uMhGXqUQT0pA8r2V5NTKGXo8ZDj5NAak0CMB2Xd6spVr9
+fKnFIGFY+WPcNqHyn06v7pOF1HXvV47MIyY1gmYgarsV8wt/2YDekidyg2EmfVJs
+a8PqJbuf9MjoW8sggD8lRomN9wc2n7A/xzMwDvFCbN4rkrCHPkt5BgDu+hVK8brY
+nM4O0gbSWa7HmIlapaKlzMwXACzBUqxA+n6Crj23X9gcy57pCAMv0mvwzKz7tvPT
+UEJvJq9PqJDAimOOLdBTODLlqJg6LkdAqg6Xt7dhyN+zB2oucw==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://razorgrant.uark.edu/Shibboleth.sso/Artifact/SOAP" index="0"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://razorgrant.uark.edu/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://razorgrant.uark.edu/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://razorgrant.uark.edu/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://razorgrant.uark.edu/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://razorgrant.uark.edu/Shibboleth.sso/SAML2/POST" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://razorgrant.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://razorgrant.uark.edu/Shibboleth.sso/SAML2/Artifact" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://razorgrant.uark.edu/Shibboleth.sso/SAML2/ECP" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://razorgrant.uark.edu/Shibboleth.sso/SAML/POST" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://razorgrant.uark.edu/Shibboleth.sso/SAML/Artifact" index="5"/>
+  </md:SPSSODescriptor>
+
+</md:EntityDescriptor>

@@ -1,0 +1,43 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_35c38b510d9a8223d497717664bb7368ccbb077a" entityID="https://dora.uark.edu/islandora/shibboleth">
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://dora.uark.edu/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://dora.uark.edu/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>dora.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=dora.uark.edu</ds:X509SubjectName>
+          <ds:X509Certificate>
+MIIC7jCCAdagAwIBAgIJALC5VZFXRbJWMA0GCSqGSIb3DQEBBQUAMBgxFjAUBgNV
+BAMTDWRvcmEudWFyay5lZHUwHhcNMTIwMjIxMTYxODI1WhcNMjIwMjE4MTYxODI1
+WjAYMRYwFAYDVQQDEw1kb3JhLnVhcmsuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEA6WBND5HTdIfnF+h4aj2pvxYchuCzAOYgNFziKcGNc03kcbkJ
+dj5xw/TTXyBgWUQs32YZDuxmwbSLNg2SVBoPS+OrCxVQwtdSWa++txpHcIdCPbeu
+pyKaMlqTR7vw9eaahklWShp0OO0hQzIp0Qpt+Jwj9SHqypKl1s3wjyGV6q52THCM
+L9n+0pom81f3LZhIutPCHxgOgKA/1JwP/iQLkePN6QaR/fbyGbeun158rgx+FbuU
+8hJ0yAkUz5GvU1n8qLlkJTR2oTAcBW4Z34K++YrAXRr2cKFZtm8RnETTA8tBNlHk
+XWzIFjPzMlLTcHO1H5URkDyRBs59KcoZlfZ83QIDAQABozswOTAYBgNVHREEETAP
+gg1kb3JhLnVhcmsuZWR1MB0GA1UdDgQWBBSkDVV/C3fX5vmyiODwDl3rzqByLDAN
+BgkqhkiG9w0BAQUFAAOCAQEAY8VT+Wt7/zlkN10rt+ciuFUwTGnalkbebZzqzk2E
+vBAKJMYUPe0SkbC1n+1lXnboAmDSDk0MPyWAwvmA2flbG6tGVH/UOncMXSchr6MH
+3CYdoIi/ZpXKfti2E3pa7IAhexweK00raIdDQnbT0J+oCfAkcKvJV8XriwmfrWIx
+t5NNuQzf3i80VzLk2cr1qipuocwND49qKnX9SqDJYGPT8bxddBOkpQuLOM6cK/1h
+oDYHjpUeAc8gIKuY+HuhWryvLqG1VvtazmRNanOmRy6sUQJjSn8dE4hxNbB6QirD
+5Yvf8X+dAUUxKPlNm4WO7thA+PnUwvFTiGRiEBvBr2XAMA==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dora.uark.edu/Shibboleth.sso/Artifact/SOAP" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dora.uark.edu/Shibboleth.sso/SAML2/POST" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://dora.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://dora.uark.edu/Shibboleth.sso/SAML2/Artifact" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://dora.uark.edu/Shibboleth.sso/SAML2/ECP" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://dora.uark.edu/Shibboleth.sso/SAML/POST" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://dora.uark.edu/Shibboleth.sso/SAML/Artifact" index="5"/>
+  </md:SPSSODescriptor>
+
+</md:EntityDescriptor>

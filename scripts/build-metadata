@@ -1,0 +1,212 @@
+#!/bin/bash
+# build-metadata: assemble and sign SAML federation metadata
+# Don Faulkner <donf@uark.edu>
+
+set -e 		# exit on error
+set -u 		# abort on unititalized variable
+IAM=`basename $0`
+
+###########################################################
+## Configuration
+## Adjust variables here to control things like how long
+## the metadata is valid for.
+
+## set the syslog facility 
+SYSLOG_FACILITY=user
+
+## set VERBOSE for verbose console logging (stderrr)
+## set VERBOSE_SYSLOG for verbose syslog messages
+VERBOSE=
+VERBOSE_SYSLOG=
+
+## Define the period for which the metadata is considered 
+## valid. This can be any date string that can be accepted
+## by the date(1) -d argument. 
+
+VALID="1 Month"
+
+## Define the period for the metadata will be cached for. 
+## This provides a hint to the IdP/SP as to how often to 
+## refresh the metadata file. The value is expressed as a
+## Java duration.
+## 
+## If running this script from cron, consider setting 
+## CACHE_DURATION to 1.5 * cron period or longer. 
+## Read about refreshDelayFactor and friends at:
+## https://wiki.shibboleth.net/confluence/x/AIFC
+
+CACHE_DURATION='PT30M'		# 30 minutes
+
+## End Configuration. Anything below is code.
+###########################################################
+
+###########################################################
+## Code
+## The ID attribute uniquely identifies a release of metadata.
+## It should change for each release, but the value is relative
+## to each metadata, so two different metadata collections can
+## have the same ID without conflict. It has the XML type xsd:ID
+
+ID=$(date -u "+UARK%Y%m%dT%H%M%S")
+
+
+## The validUntil attribute is the latest time for which a
+## given metadata file is considered valid.
+
+VALID_UNTIL=$(date -u -d "$VALID" "+%Y-%m-%dT%H:%M:%SZ")
+
+## Path to xmlsectool
+XMLSECTOOL=/home/quux/Downloads/xmlsectool-1.1.5/xmlsectool.sh
+
+log() {
+	local logLevel=$1
+	local logMessage="$2"
+
+	case "$logLevel" in
+		emerg|alert|crit|err|warning|notice)
+			echo -ne "$IAM ($logLevel): " 1>&2
+			echo -e "$logMessage" 1>&2
+			logger -p $SYSLOG_FACILITY.$logLevel -t $IAM $logMessage || true
+			;;
+		info|debug)
+			if [ -n "$VERBOSE" ]; then
+				echo -ne "$IAM ($logLevel): " 1>&2
+				echo -e "$logMessage" 1>&2
+			fi
+			if [ -n "$VERBOSE_SYSLOG" ]; then
+				logger -p $SYSLOG_FACILITY.$logLevel -t $IAM $logMessage || true
+			fi
+			;;
+		*)
+			echo -ne "$IAM (err): " 1>&2
+			echo -e "log level $logLevel doesn't exist." 1>&2
+			exit 1
+	esac
+}
+
+# make xmllint use tabs instead of spaces.
+export XMLLINT_INDENT='	'
+
+## start in the right directory. 
+## This script should live in a scripts/ sub directory.
+## We want to execute from the parent of that.
+
+cd `dirname "$0"`
+cd ..
+
+## make sure we have the latest changes from the repository
+#git pull
+
+## make sure that all the working directories exist
+
+mkdir tmp 2>/dev/null || true
+mkdir output 2>/dev/null || true
+
+## Each subdirectory under groups/ contains a collection of
+## metadata that will be assembled into a single metadata
+## file, named for the name of the directory under groups/
+
+for GROUP in groups/*; do
+	# if not a directory, go to the next item in the list
+	[ ! -d "$GROUP" ] && continue
+
+	GROUP=`basename $GROUP`
+	UNSIGNED=tmp/$GROUP-metadata-unsigned.xml
+	SIGNED=tmp/$GROUP-metadata.xml
+	MDNAME="https://www.uark.edu/metadata/$GROUP-metadata.xml"
+	log info "processing $GROUP"
+
+	# assemble metadata
+
+	cat scripts/entities-descriptor-head.xml \
+		groups/$GROUP/* \
+		scripts/entities-descriptor-foot.xml \
+		> $UNSIGNED
+	log info "built $UNSIGNED"
+
+	# modify attributes to correspond to the release being built.
+	xmlstarlet ed -P -O -L \
+		-N md="urn:oasis:names:tc:SAML:2.0:metadata" \
+		-N ds="http://www.w3.org/2000/09/xmldsig\#" \
+		-N shibmd="urn:mace:shibboleth:metadata:1.0" \
+		-N xsi="http://www.w3.org/2001/XMLSchema-instance" \
+		-u //md:EntitiesDescriptor/@ID -v "$ID" \
+		-u //md:EntitiesDescriptor/@validUntil -v "$VALID_UNTIL" \
+		-u //md:EntitiesDescriptor/@cacheDuration -v "$CACHE_DURATION" \
+		-u //md:EntitiesDescriptor/@Name -v "$MDNAME" \
+		$UNSIGNED
+	log info "updated EntitiesDescriptor attributes"
+
+	# clean up the XML
+	xmllint --format --recover --output $UNSIGNED $UNSIGNED
+
+	# initial tests to make sure we didn't screw anything up
+	# check here to confirm that:
+	#  1. /EntitiesDescriptor/@ID exists and matches /UARK\d+T\d+/
+	#  2. /EntitiesDescriptor/@validUntil exists and matches /\d+-\d+-\d+T\d+:\d+:\d+Z/
+	#  3. /EntitiesDescriptor/@cacheDuration exists and matches Java Duration
+	#  4. /EntitiesDescriptor/@Name exists and matches /https:\/\/.*uark\.edu.*$GROUP/
+	# fail if any of the above are false.
+
+	# search for what we want. If the result is empty, error out.
+	if [ -z "`perl -ne 'print if /EntitiesDescriptor.*ID="UARK\d+T\d+"/' $UNSIGNED`" ]; then
+		log err "/EntitiesDescriptor/@ID fails pattern match"
+		exit 1
+	fi
+
+	if [ -z "`perl -ne 'print if /EntitiesDescriptor.*validUntil="\d+-\d+-\d+T\d+:\d+:\d+Z"/' $UNSIGNED`" ]; then
+		log err "/EntitiesDescriptor/@validUntil fails pattern match"
+		exit 1
+	fi
+
+	if [ -z "`perl -ne 'print if /EntitiesDescriptor.*cacheDuration="(?:[\-\+])?P(?:(\d+)Y)?(?:(\d+)M)?(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+(?:\.\d+)?)?S)?)"/' $UNSIGNED`" ]; then
+		log err "/EntitiesDescriptor/@cacheDuration fails pattern match"
+		exit 1
+	fi
+
+	if [ -z "`perl -ne 'print if /EntitiesDescriptor.*Name=".*uark\.edu.*$ENV{GROUP}/' $UNSIGNED`" ]; then
+		log err "/EntitiesDescriptor/@Name fails pattern match"
+		exit 1
+	fi
+
+	## Checks passed.
+	log info "$GROUP passed consistency checks"
+
+	## If a corresponding key for the group exists, sign the metdata file.
+	## Otherwise, just make a copy to maintain the naming convention.
+
+	if [ -f keys/$GROUP.key -a -f keys/$GROUP.pem ]; then
+		#sign
+		$XMLSECTOOL --validateSchema --sign \
+			${VERBOSE:+--verbose} ${VERBOSE:---quiet} \
+			--schemaDirectory schema --xsd --signatureRequired \
+			--referenceIdAttributeName ID \
+			--certificate keys/$GROUP.pem --key keys/$GROUP.key \
+			--inFile $UNSIGNED \
+			--outFile $SIGNED
+		log info "signed $UNSIGNED"
+
+		#verify
+		$XMLSECTOOL ${VERBOSE:+--verbose} ${VERBOSE:---quiet} \
+			--verifySignature --certificate keys/$GROUP.pem --inFile $SIGNED
+		log info "verified signature on $SIGNED"
+		cp keys/$GROUP.pem tmp
+	else
+		cp $UNSIGNED $SIGNED
+		log info "no key: copied $UNSIGNED to $SIGNED"
+	fi
+
+	$XMLSECTOOL ${VERBOSE:+--verbose} ${VERBOSE:---quiet} \
+		--validateSchema --schemaDirectory schema --xsd --inFile $SIGNED
+	log info "validated schema of $SIGNED"
+
+	# All finished. tmp/$GROUP-metadata.xml is the file we want
+done
+
+## At this point, we've iterated over all /groups/* directories.
+## tmp contains an -unsigned-metadata and a -metadata file for each GROUP.
+## All that's left is to copy the (signed) -metadata files to output
+
+cp tmp/*-metadata.xml output
+cp tmp/*.pem output
+log notice "finished files in output"

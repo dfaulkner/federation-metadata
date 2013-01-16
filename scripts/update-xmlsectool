@@ -1,0 +1,53 @@
+#!bin/bash
+# update-xmlsectool: download the latest xmlsectool and update the repository.
+# Don Faulkner <donf@uark.edu>
+
+set -e 		# exit on error
+set -u 		# abort on unititalized variable
+IAM=`basename $0`
+
+## This script assumes that xmlsectool can be found as a
+## zip file linked from the provided URL, and that there is
+## only one zip file at the URL.
+## We checkout the vendor branch for xmlsectool, download 
+## the zip file using wget, unpack and delete the zip file
+## commit and merge the changes.
+
+###########################################################
+## Configuration
+## URL: where to look for xmlsectool.
+URL="http://shibboleth.net/downloads/tools/xmlsectool/latest/"
+
+## Name of the branches we're using
+MASTER="master"
+VENDOR="vendor"
+
+## End Configuration. Anything below is code.
+###########################################################
+
+###########################################################
+## Code
+
+git checkout $VENDOR
+
+## get the new xmlsectool
+wget -e robots=off -r -nd -np -A .zip "$URL"
+VERSION=`basename xmlsectool*.zip -bin.zip`
+unzip *.zip
+rm *.zip
+
+## fix permissions
+chmod -R go-w xmlsectool-*
+
+## replace the old xmlsectool directory
+rm -rf xmlsectool
+mv xmlsectool-* xmlsectool
+
+## add changes and commit to vendor branch
+git add xmlsectool
+git commit -a -m "Vendor update: $VERSION"
+git tag "$VERSION"
+
+## merge the vendor branch back into master
+git checkout $MASTER
+git merge $VENDOR
