@@ -129,7 +129,6 @@ for GROUP in groups/*; do
 		-N md="urn:oasis:names:tc:SAML:2.0:metadata" \
 		-N ds="http://www.w3.org/2000/09/xmldsig\#" \
 		-N shibmd="urn:mace:shibboleth:metadata:1.0" \
-		-N xsi="http://www.w3.org/2001/XMLSchema-instance" \
 		-u //md:EntitiesDescriptor/@ID -v "$ID" \
 		-u //md:EntitiesDescriptor/@validUntil -v "$VALID_UNTIL" \
 		-u //md:EntitiesDescriptor/@cacheDuration -v "$CACHE_DURATION" \
