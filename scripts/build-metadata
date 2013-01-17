@@ -95,7 +95,7 @@ cd `dirname "$0"`
 cd ..
 
 ## make sure we have the latest changes from the repository
-#git pull
+git pull
 
 ## make sure that all the working directories exist
 
@@ -119,7 +119,7 @@ for GROUP in groups/*; do
 	# assemble metadata
 
 	cat scripts/entities-descriptor-head.xml \
-		groups/$GROUP/* \
+		groups/$GROUP/*.xml \
 		scripts/entities-descriptor-foot.xml \
 		> $UNSIGNED
 	log info "built $UNSIGNED"
@@ -129,7 +129,6 @@ for GROUP in groups/*; do
 		-N md="urn:oasis:names:tc:SAML:2.0:metadata" \
 		-N ds="http://www.w3.org/2000/09/xmldsig\#" \
 		-N shibmd="urn:mace:shibboleth:metadata:1.0" \
-		-N xsi="http://www.w3.org/2001/XMLSchema-instance" \
 		-u //md:EntitiesDescriptor/@ID -v "$ID" \
 		-u //md:EntitiesDescriptor/@validUntil -v "$VALID_UNTIL" \
 		-u //md:EntitiesDescriptor/@cacheDuration -v "$CACHE_DURATION" \

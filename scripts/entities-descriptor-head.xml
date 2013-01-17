@@ -3,6 +3,7 @@
     xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
     xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:oasis:names:tc:SAML:2.0:metadata sstc-saml-schema-metadata-2.0.xsd urn:mace:shibboleth:metadata:1.0 shibboleth-metadata-1.0.xsd http://www.w3.org/2000/09/xmldsig# xmldsig-core-schema.xsd"
     ID="UARK00000000"
     validUntil="1970-01-01T00:00:00Z"
     cacheDuration="PT1H">
