@@ -56,4 +56,4 @@ git tag "$VERSION"
 
 ## merge the vendor branch back into master
 git checkout $MASTER
-git merge $VENDOR -m "merge vendor branch update"
+git merge $VENDOR
