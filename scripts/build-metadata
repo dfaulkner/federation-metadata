@@ -119,7 +119,7 @@ for GROUP in groups/*; do
 	# assemble metadata
 
 	cat scripts/entities-descriptor-head.xml \
-		groups/$GROUP/* \
+		groups/$GROUP/*.xml \
 		scripts/entities-descriptor-foot.xml \
 		> $UNSIGNED
 	log info "built $UNSIGNED"
