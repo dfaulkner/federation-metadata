@@ -37,6 +37,16 @@ VALID="1 Month"
 
 CACHE_DURATION='PT30M'		# 30 minutes
 
+
+## You can manually set JAVA_HOME here if necessary.
+## If you leave the variable set and empty, the script
+## will try to guess the right location based on OS
+## The below bash-ism will pull from the user environment
+## if set, otherwise will be blank to force detection.
+## JAVA_HOME=${JAVA_HOME:-""}
+
+JAVA_HOME=${JAVA_HOME:-""}
+
 ## End Configuration. Anything below is code.
 ###########################################################
 
@@ -81,8 +91,56 @@ log() {
 			echo -ne "$IAM (err): " 1>&2
 			echo -e "log level $logLevel doesn't exist." 1>&2
 			exit 3
+			;;
 	esac
 }
+
+
+## Try to pick a sane JAVA_HOME
+if [ -z "$JAVA_HOME" ]; then
+	case `uname -s` in
+		Linux)
+			case `lsb_release -is | tr 'A-Z' 'a-z'` in
+				redhat*|centos*)
+					JAVA_HOME=/usr/lib/jvm/jre
+					;;
+				debian*|ubuntu*)
+					JAVA_HOME=/usr/lib/jvm/default-java
+					;;
+				*)
+					log err "Unrecognized distribution. Unable to guess JAVA_HOME on Linux"
+					exit 3
+					;;
+			esac
+			;;
+		SunOS)
+			if [ -d /usr/java ]; then
+				JAVA_HOME=/usr/java
+			else
+				log err "/usr/java doesn't exist. Unable to guess JAVA_HOME on Solaris"
+			fi
+			;;
+		Darwin)
+			if [ -x /usr/libexec/java_home ]; then
+				JAVA_HOME=`/usr/libexec/java_home`
+			else
+				log err "/usr/libexec/java_home unavailable. Unable to set JAVA_HOME on MacOS"
+				exit 3
+			fi
+			;;
+		*)
+			log err "Unable to guess JAVA_HOME on unrecognized OS"
+			exit 3
+			;;
+	esac
+fi
+log debug "set JAVA_HOME to $JAVA_HOME"
+if [ ! -f "$JAVA_HOME/lib/tools.jar" ]; then
+	log err "JAVA_HOME set, but does not appear to be a real JAVA_HOME"
+	exit 3
+fi
+export JAVA_HOME
+
 
 # make xmllint use tabs instead of spaces.
 export XMLLINT_INDENT='	'
