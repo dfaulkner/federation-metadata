@@ -37,6 +37,11 @@ VALID="1 Month"
 
 CACHE_DURATION='PT30M'		# 30 minutes
 
+## Metadata URL. Used to construct the name attribute
+## for the metadata. It's really arbitrary, but if you
+## can make the URL match the real URL, that's nice.
+
+METADATA_URL="https://federation.uark.edu/metadata"
 
 ## You can manually set JAVA_HOME here if necessary.
 ## If you leave the variable set and empty, the script
@@ -171,7 +176,7 @@ for GROUP in groups/*; do
 	GROUP=`basename $GROUP`
 	UNSIGNED=tmp/$GROUP-metadata-unsigned.xml
 	SIGNED=tmp/$GROUP-metadata.xml
-	MDNAME="https://federation.uark.edu/metadata/$GROUP-metadata.xml"
+	MDNAME="$METADATA_URL/$GROUP-metadata.xml"
 	log info "processing $GROUP"
 
 	# assemble metadata
