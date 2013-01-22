@@ -233,22 +233,22 @@ for GROUP in groups/*; do
 	## If a corresponding key for the group exists, sign the metdata file.
 	## Otherwise, just make a copy to maintain the naming convention.
 
-	if [ -f keys/$GROUP.key -a -f keys/$GROUP.pem ]; then
+	if [ -f keys/$GROUP.key -a -f keys/$GROUP.crt ]; then
 		#sign
 		$XMLSECTOOL --validateSchema --sign \
 			${VERBOSE:+--verbose} ${VERBOSE:---quiet} \
 			--schemaDirectory schema --xsd --signatureRequired \
 			--referenceIdAttributeName ID \
-			--certificate keys/$GROUP.pem --key keys/$GROUP.key \
+			--certificate keys/$GROUP.crt --key keys/$GROUP.key \
 			--inFile $UNSIGNED \
 			--outFile $SIGNED
 		log info "signed $UNSIGNED"
 
 		#verify
 		$XMLSECTOOL ${VERBOSE:+--verbose} ${VERBOSE:---quiet} \
-			--verifySignature --certificate keys/$GROUP.pem --inFile $SIGNED
+			--verifySignature --certificate keys/$GROUP.crt --inFile $SIGNED
 		log info "verified signature on $SIGNED"
-		cp keys/$GROUP.pem tmp
+		cp keys/$GROUP.crt tmp
 	else
 		cp $UNSIGNED $SIGNED
 		log info "no key: copied $UNSIGNED to $SIGNED"
@@ -272,8 +272,8 @@ else
 	log err "no metadata generated. aborting."
 	exit 1
 fi
-if [ -n "`find tmp -maxdepth 1 -name '*.pem' -print -quit`" ]; then
-	cp tmp/*.pem output
+if [ -n "`find tmp -maxdepth 1 -name '*.crt' -print -quit`" ]; then
+	cp tmp/*.crt output
 else
 	log notice "no certificates used. all metadata is unsigned."
 fi
