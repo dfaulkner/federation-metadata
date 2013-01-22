@@ -1,0 +1,128 @@
+#!/bin/bash
+# keygen: generate a new key and certificate for use in metadata signing
+# Don Faulkner <donf@uark.edu>
+
+set -e 		# exit on error
+IAM=`basename $0`
+
+## This script generates a new signing key & certificate
+## specifically for the purpose of signing SAML metadata.
+## 
+## It's a BAD IDEA to use these keys for any other purpose.
+
+
+###########################################################
+## Configuration
+
+## How many days the certificate is good for.
+## 10 years is suggested.
+VALID=3650
+
+## Key Size
+KEY_SIZE=2048
+
+## how many keys to keep for a particular group
+ROTATION=6
+
+## set the syslog facility 
+SYSLOG_FACILITY=user
+
+## set VERBOSE for verbose console logging (stderrr)
+## set VERBOSE_SYSLOG for verbose syslog messages
+VERBOSE=
+VERBOSE_SYSLOG=
+
+## End Configuration. Anything below is code.
+###########################################################
+
+###########################################################
+## Code
+
+usage()
+{
+	case $1 in
+		long) usage short
+			echo -e "\tgroupname\tName of a group in the groups directory"
+			;;
+		*)
+			echo -e "usage: $IAM [groupname]"
+			;;
+	esac
+}
+
+log() {
+	local logLevel=$1
+	local logMessage="$2"
+
+	case "$logLevel" in
+		emerg|alert|crit|err|warning|notice)
+			echo -ne "$IAM ($logLevel): " 1>&2
+			echo -e "$logMessage" 1>&2
+			logger -p $SYSLOG_FACILITY.$logLevel -t $IAM $logMessage || true
+			;;
+		info|debug)
+			if [ -n "$VERBOSE" ]; then
+				echo -ne "$IAM ($logLevel): " 1>&2
+				echo -e "$logMessage" 1>&2
+			fi
+			if [ -n "$VERBOSE_SYSLOG" ]; then
+				logger -p $SYSLOG_FACILITY.$logLevel -t $IAM $logMessage || true
+			fi
+			;;
+		*)
+			echo -ne "$IAM (err): " 1>&2
+			echo -e "log level $logLevel doesn't exist." 1>&2
+			exit 3
+			;;
+	esac
+}
+
+
+## start in the right directory. 
+## This script should live in a scripts/ sub directory.
+## We want to execute from the parent of that.
+
+cd `dirname "$0"`
+cd ..
+
+## make sure a group name has been specified.
+## Warn if the group doesn't exist yet.
+if [ -z "$1" ]; then
+	usage 
+	exit 1
+fi
+GROUP=$1
+if [ ! -d "groups/$GROUP" ]; then
+	log warning "directory groups/$GROUP doesn't exist yet. $GROUP key will be non-functional until metadata group is created."
+fi
+
+
+## startup checks passed.
+
+set -u 		# abort on unititalized variable
+
+## make sure the keys directory exists
+
+mkdir keys >/dev/null 2>&1 || true
+
+## rotate existing keys, just in case.
+## we want to retain any existing key for $GROUP
+## because we'll need it during migration.
+
+for i in `seq -s ' ' 1 $ROTATION | rev`; do 
+	if [ -f keys/$GROUP.crt.$i ]; then
+		mv keys/$GROUP.crt.$i keys/$GROUP.crt.$((i+1))
+	fi
+	if [ -f keys/$GROUP.key.$i ]; then
+		mv keys/$GROUP.key.$i keys/$GROUP.key.$((i+1))
+	fi
+done
+rm -f keys/$GROUP.key.$((ROTATION+1))
+rm -f keys/$GROUP.crt.$((ROTATION+1))
+mv keys/$GROUP.key keys/$GROUP.key.1
+mv keys/$GROUP.crt keys/$GROUP.crt.1
+
+openssl req -nodes -new -x509 -keyout keys/$GROUP.key -out keys/$GROUP.crt \
+		-days $VALID -newkey rsa:$KEY_SIZE \
+		-subj "/CN=$GROUP.federation.uark.edu"
+log info "generated new key for $GROUP"
