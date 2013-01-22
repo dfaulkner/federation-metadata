@@ -180,8 +180,10 @@ for GROUP in groups/*; do
 	log info "processing $GROUP"
 
 	# assemble metadata
+	# use grep to remove any stray <?xml ... declarations
 
-	cat scripts/entities-descriptor-head.xml \
+	grep -vhF '<?xml' \
+		scripts/entities-descriptor-head.xml \
 		groups/$GROUP/*.xml \
 		scripts/entities-descriptor-foot.xml \
 		> $UNSIGNED
