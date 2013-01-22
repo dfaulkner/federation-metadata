@@ -119,10 +119,12 @@ for i in `seq -s ' ' 1 $ROTATION | rev`; do
 done
 rm -f keys/$GROUP.key.$((ROTATION+1))
 rm -f keys/$GROUP.crt.$((ROTATION+1))
-mv keys/$GROUP.key keys/$GROUP.key.1
-mv keys/$GROUP.crt keys/$GROUP.crt.1
+if [ -f keys/$GROUP.key ]; then mv keys/$GROUP.key keys/$GROUP.key.1; fi
+if [ -f keys/$GROUP.crt ]; then mv keys/$GROUP.crt keys/$GROUP.crt.1; fi
 
 openssl req -nodes -new -x509 -keyout keys/$GROUP.key -out keys/$GROUP.crt \
 		-days $VALID -newkey rsa:$KEY_SIZE \
 		-subj "/CN=$GROUP.federation.uark.edu"
+
 log info "generated new key for $GROUP"
+
