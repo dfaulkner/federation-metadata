@@ -171,7 +171,7 @@ for GROUP in groups/*; do
 	GROUP=`basename $GROUP`
 	UNSIGNED=tmp/$GROUP-metadata-unsigned.xml
 	SIGNED=tmp/$GROUP-metadata.xml
-	MDNAME="https://www.uark.edu/metadata/$GROUP-metadata.xml"
+	MDNAME="https://federation.uark.edu/metadata/$GROUP-metadata.xml"
 	log info "processing $GROUP"
 
 	# assemble metadata

@@ -1,4 +1,4 @@
-<EntitiesDescriptor Name="https://www.uark.edu/federation/undefined"
+<EntitiesDescriptor Name="https://federation.uark.edu/federation/undefined"
     xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
     xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
     xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
