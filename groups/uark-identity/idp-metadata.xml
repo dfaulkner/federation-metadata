@@ -5,6 +5,13 @@
 
         <Extensions>
             <shibmd:Scope regexp="false">uark.edu</shibmd:Scope>
+            <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+                <mdui:DisplayName xml:lang="en">University of Arkansas</mdui:DisplayName>
+                <mdui:Description xml:lang="en">University of Arkansas, Fayetteville</mdui:Description>
+                <mdui:InformationURL xml:lang="en">http://www.uark.edu</mdui:InformationURL>
+                <mdui:PrivacyStatementURL xml:lang="en">http://its.uark.edu/privacy.html</mdui:PrivacyStatementURL>
+                <mdui:Logo height="88" width="300" xml:lang="en">https://idp.uark.edu/idp/images/uark.logo.png</mdui:Logo>
+            </mdui:UIInfo>
         </Extensions>
 
         <KeyDescriptor>
@@ -91,5 +98,18 @@ JkNZiOnZ+OBZcqrcpzW0N93Twh4aoOHdO7qTCafVe0M=
         <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
         
     </AttributeAuthorityDescriptor>
-    
+    <Organization>
+        <OrganizationName xml:lang="en">University of Arkansas</OrganizationName>
+        <OrganizationDisplayName xml:lang="en">University of Arkansas</OrganizationDisplayName>
+        <OrganizationURL xml:lang="en">http://www.uark.edu/</OrganizationURL>
+    </Organization>
+    <ContactPerson contactType="technical">
+        <GivenName>System Administrator</GivenName>
+        <EmailAddress>root@uark.edu</EmailAddress>
+    </ContactPerson>
+    <ContactPerson contactType="administrative">
+        <GivenName>Security</GivenName>
+        <EmailAddress>security@uark.edu</EmailAddress>
+    </ContactPerson>
+
 </EntityDescriptor>
