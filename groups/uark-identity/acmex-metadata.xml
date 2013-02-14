@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" entityID="https://acmex.uark.edu/idp/shibboleth">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">uark.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAMag4dN6Dx10jsoREIBqaUjyvzKQMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmFjbWV4LnVhcmsuZWR1MB4XDTEyMDYyMTE5MjUwOFoX
+DTMyMDYyMTE5MjUwOFowGTEXMBUGA1UEAxMOYWNtZXgudWFyay5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCPF6OQ2z5Qab4472Fe2qYlvk7i1hD5
+t/FJToMI+NeQNa4nB9gBm+4T7s+zmuvCHPmZgLC4DwUEstcxk2HIqrbHZyVVfMWh
+BNph3iGOZb+w9vo8leaTfDhKYCNegJ8ZpQRJ2uEUNfO7L4H18hQTi/WVJqOx45Hf
+zrplzfjSRdSuKo5cgHNZahpvkBGzomyENxeInyNU++vMXDExn6M0ewRilwGCaMME
+LUKCiJBDgfS/lx+0X+WQSSwbmLuokJeHZGtE0K56Y81oOiHQO+eqxZKe0n8kDQaM
+LDRQfOO74mEg2NZHDbtUtwYo7etfsBwua0b+PwhBQ2UZaYKmfkNu7WoFAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmFjbWV4LnVhcmsuZWR1hiVodHRwczovL2FjbWV4LnVh
+cmsuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQh6hUFlXmzjOX73jFM8I6/
+DzcG8zANBgkqhkiG9w0BAQUFAAOCAQEAcL7d51W4r/fOMZ7sQbMc1CUAOftIAPut
+Wn0timHTC5E8EJYFm+f0g0bGCCiczMGu+4DQsUGHV/x9ks9GGFP6dWecZG+3bXRU
+LnxPofSdI7z6pDug+T47y8hb53Cqxr82ZbBdQmnWolqn2h1ceqDpy0A1DfkgqZlv
+h25zghpFa5NVx9t7lRbZ1sEYPXOt7H32cKYffmTUnm4JDbp1LuxbhNfglSwTkfEz
+5W43a6WNvi/utYe8p6phDbH3T6g3AkpXxCMiV3Sqb+cuwfxn/fHWtNrXOngW7vJc
+w1QRJdTjB+gildGSkmjSPLaTeD44po9xegmpvbXAeDWW3/Grjo176A==
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://acmex.uark.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://acmex.uark.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+                                   
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://acmex.uark.edu/idp/profile/Shibboleth/SSO"/>
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://acmex.uark.edu/idp/profile/SAML2/POST/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://acmex.uark.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://acmex.uark.edu/idp/profile/SAML2/Redirect/SSO"/>
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">uark.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDJDCCAgygAwIBAgIVAMag4dN6Dx10jsoREIBqaUjyvzKQMA0GCSqGSIb3DQEB
+BQUAMBkxFzAVBgNVBAMTDmFjbWV4LnVhcmsuZWR1MB4XDTEyMDYyMTE5MjUwOFoX
+DTMyMDYyMTE5MjUwOFowGTEXMBUGA1UEAxMOYWNtZXgudWFyay5lZHUwggEiMA0G
+CSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCPF6OQ2z5Qab4472Fe2qYlvk7i1hD5
+t/FJToMI+NeQNa4nB9gBm+4T7s+zmuvCHPmZgLC4DwUEstcxk2HIqrbHZyVVfMWh
+BNph3iGOZb+w9vo8leaTfDhKYCNegJ8ZpQRJ2uEUNfO7L4H18hQTi/WVJqOx45Hf
+zrplzfjSRdSuKo5cgHNZahpvkBGzomyENxeInyNU++vMXDExn6M0ewRilwGCaMME
+LUKCiJBDgfS/lx+0X+WQSSwbmLuokJeHZGtE0K56Y81oOiHQO+eqxZKe0n8kDQaM
+LDRQfOO74mEg2NZHDbtUtwYo7etfsBwua0b+PwhBQ2UZaYKmfkNu7WoFAgMBAAGj
+YzBhMEAGA1UdEQQ5MDeCDmFjbWV4LnVhcmsuZWR1hiVodHRwczovL2FjbWV4LnVh
+cmsuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBQh6hUFlXmzjOX73jFM8I6/
+DzcG8zANBgkqhkiG9w0BAQUFAAOCAQEAcL7d51W4r/fOMZ7sQbMc1CUAOftIAPut
+Wn0timHTC5E8EJYFm+f0g0bGCCiczMGu+4DQsUGHV/x9ks9GGFP6dWecZG+3bXRU
+LnxPofSdI7z6pDug+T47y8hb53Cqxr82ZbBdQmnWolqn2h1ceqDpy0A1DfkgqZlv
+h25zghpFa5NVx9t7lRbZ1sEYPXOt7H32cKYffmTUnm4JDbp1LuxbhNfglSwTkfEz
+5W43a6WNvi/utYe8p6phDbH3T6g3AkpXxCMiV3Sqb+cuwfxn/fHWtNrXOngW7vJc
+w1QRJdTjB+gildGSkmjSPLaTeD44po9xegmpvbXAeDWW3/Grjo176A==
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://acmex.uark.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+        
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://acmex.uark.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+        
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        
+    </AttributeAuthorityDescriptor>
+    
+</EntityDescriptor>
