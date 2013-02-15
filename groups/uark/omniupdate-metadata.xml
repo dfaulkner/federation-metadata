@@ -63,16 +63,14 @@ T1z4aw==
     <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://omniupdate.uark.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
     <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://omniupdate.uark.edu/Shibboleth.sso/SAML/POST" index="5"/>
     <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://omniupdate.uark.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+
 	<md:AttributeConsumingService index="1">
-        <md:ServiceName xml:lang="en">University of Arkansas OUCampus</md:ServiceName>
-		<md:ServiceDescription xml:lang="en">OmniUpdate OUCampus installation</md:serviceDescription>
-		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName"
-			Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6"
-			NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
-		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName"
-			Name="urn:mace:dir:attribute-def:eduPersonPrincipalName"
-			NameFormat="urn:mace:shibboleth:1.0:attributeNamespace:uri"/>
+		<md:ServiceName xml:lang="en">University of Arkansas OUCampus</md:ServiceName>
+		<md:ServiceDescription xml:lang="en">OmniUpdate OUCampus installation</md:ServiceDescription>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:mace:dir:attribute-def:eduPersonPrincipalName" NameFormat="urn:mace:shibboleth:1.0:attributeNamespace:uri"/>
+		<md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
 	</md:AttributeConsumingService>
+
   </md:SPSSODescriptor>
   <md:Organization>
 	  <md:OrganizationName xml:lang="en">University of Arkansas</md:OrganizationName>
