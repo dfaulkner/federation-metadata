@@ -1,3 +1,7 @@
+<!--
+This is example metadata only. Do *NOT* supply it as is without review,
+and do *NOT* provide it in real time to your partners.
+ -->
 <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_d9e05d9b15d370e0d2716ee722efe66c5745c7e4" entityID="https://kc4.uark.edu/shibboleth">
 
   <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
@@ -25,23 +29,23 @@
         <ds:KeyName>kc4.uark.edu</ds:KeyName>
         <ds:X509Data>
           <ds:X509SubjectName>CN=kc4.uark.edu</ds:X509SubjectName>
-          <ds:X509Certificate>MIIDDjCCAfagAwIBAgIJANzX5GJJgQQYMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
-BAMTDGtjNC51YXJrLmVkdTAgFw0xMzA0MDMyMjA0MDJaGA8yMTEzMDMxMDIyMDQw
+          <ds:X509Certificate>MIIDDjCCAfagAwIBAgIJAOtpE4bE1iSFMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDGtjNC51YXJrLmVkdTAgFw0xMzA0MDQxNzQwMTJaGA8yMTEzMDMxMTE3NDAx
 MlowFzEVMBMGA1UEAxMMa2M0LnVhcmsuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
-AQ8AMIIBCgKCAQEA4xE+rzIbB0LUDxneMcGiPQso4tZl1uZw3UAIOXaJH8w9il3f
-YERxOAb2tvukpn9uGADiteuYjkB/a3F0ybN1jtXxJGjF2YfRWS6evgZ60eYRUR7s
-vJn9FPo7DVoLRM7rJS/wE31bynnipsLIlcI0CRKnzCfnhrevmGglB5dFElxVAkyW
-a6VDAsUctCH66724q7QS4xWJEzH4/LCp/y+cRS3HOJuDkI/xQaflAIVf5+iHInHI
-ot/xn+ZUEjUlAnWXJRw7ITbrM5j69n5KzJjHypiJg/gqfP/MpKsa/vsN8rdO9Y3l
-Yn8oo7EzWAvO4qcU23GSQiv+3YCHOAXVL0CvWQIDAQABo1swWTA4BgNVHREEMTAv
+AQ8AMIIBCgKCAQEAw6qkKu1d7T00y0xXF79dcUQ+vUeP0CB1Gx7YY73dxnWwuGS0
+y9tO0hhcmRN/n/rqPHo/SRiytSJi/td73E9j6iuCeBz9oEd4DM7yPsQ5qvBCFhqK
+qDTd+af49VzPNO1AP1Ngh25/NkgAvZSLdim13Sv614qWbvAOPRznkSWz6mn3UC3B
+/ImLBCRIEdOzP4uJ2bJF9BPnxo9hOgbRe1fhe4NbpqeT6vPKlPh/SDcWrHYsYVKA
+whmigpq17/JG8SIJe2s8smTNioopM1/za2W3yXG1qDIBVQ+aPKpv/1/9WeuZ7HUq
+hUn+FuzlP+hp0BhyPBefKQRu5SkXjjC0lkZAKwIDAQABo1swWTA4BgNVHREEMTAv
 ggxrYzQudWFyay5lZHWGH2h0dHBzOi8va2M0LnVhcmsuZWR1L3NoaWJib2xldGgw
-HQYDVR0OBBYEFPNAyhoDTjeDMGzXe8L3N6TXhv+ZMA0GCSqGSIb3DQEBBQUAA4IB
-AQAEj/m/8SvVFJa+CHP+ncjoZZoxRvaZkCVTmM53i9FVuuQklp4kWjUoT0f146zR
-ArH42569EpxjFPmqudOsXHG5G5QFptrgl+6lt/74ivZ/rugoXG+Klw65pHxVykog
-ge1fAs1OJeIeZhLYIT3AB3M8TLixDudjmaTTKIsdYLIy8KA9H6MR3hEBF0CWx2c/
-Lr2u5CqPQzzMYJtZrMcO1lZhti3n1UjO+jxSpjI7cjRM3H/t2mX00DPrJe9Yg/f8
-Oo+RjkHsNbuTsh6+tiN/UBiUBRU26Qs0SfmZbEs0UtlkuejSq77NFYXIYR9tcutq
-nfnKU4tACSRFOcpEAt/PD/in
+HQYDVR0OBBYEFLNdakW2FNGQYt0WBTU4STWUR85/MA0GCSqGSIb3DQEBBQUAA4IB
+AQBJy5grt1ljCZBgyjcM5ZhUdgZO+Xtskfw4JyFZGQsdAEQxDXVEWRDDvaCLV4D1
+rwoJ6DAT697En4fNHFiGTO7yDRQsxZ9vhWBmD8UkqKztUNMsg/5BpWGOMvFJOpwM
+cfAYkFWrGdZ2TnopA6EDiRVBFPoYAicF0tbQCWBE/F3+rDFPAJnEAzSUryhlSwiI
+qHkGm3itEwKj8x0Hp9MNlWoidl+mMpsZ+2eLYL5DNaTu2UqGd2WQOKGWr1JaED0J
+A6NJK5R7BEypDQD3+DtmIQhAsbQL7q1sKr4JI4h+hK04bMTSSPuD+GrgbC+vFhmI
+GaGEQrqQeLDw8SNjfYHHVAxI
 </ds:X509Certificate>
         </ds:X509Data>
       </ds:KeyInfo>
