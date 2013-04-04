@@ -1,0 +1,68 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_c7abcc6c7748d399f15875b09be1f7588e783b36" entityID="https://wistest.uark.edu/wiki/shibboleth">
+	<md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+		<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+		<md:Extensions>
+			<init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/Login"/>
+			<idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/Login" index="1"/>
+			<mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+				<mdui:DisplayName xml:lang="en">WIS Second Application with override</mdui:DisplayName>
+				<mdui:InformationURL xml:lang="en">https://wistest.uark.edu/sp-info/</mdui:InformationURL>
+				<mdui:Logo height="578" width="400" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor>
+			<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:KeyName>wistest.uark.edu</ds:KeyName>
+				<ds:X509Data>
+					<ds:X509SubjectName>CN=wistest.uark.edu</ds:X509SubjectName>
+					<ds:X509Certificate>MIIC9zCCAd+gAwIBAgIJAOd/B9zbI2pFMA0GCSqGSIb3DQEBBQUAMBsxGTAXBgNV
+						BAMTEHdpc3Rlc3QudWFyay5lZHUwHhcNMTIwOTEyMjA0OTMwWhcNMjIwOTEwMjA0
+						OTMwWjAbMRkwFwYDVQQDExB3aXN0ZXN0LnVhcmsuZWR1MIIBIjANBgkqhkiG9w0B
+						AQEFAAOCAQ8AMIIBCgKCAQEA0kUDs/776DFQmfL0KeE95vXBJpvg++p2bH5JlR2B
+						y5GBGgKE3orjdwKAaboZphfyq5dqlhBL3AqePOzChmvSir3n5PujIFc1qpqMRX/j
+						mf/z5vqnBofNS88GkzUtiE1zGfHPqMfVMy7GZymA8ni8yRgWZN9Z1cQ9hajRqkju
+						sHn9ojS6+Wj7zfpBCZcOEuPJ3nIscYAsFvja7D8p6Xj3JPC9bxrtmuOQIp6YA0EI
+						V9aW7ltMd1JUeYkshY3XadGtW/u9Zty+zVZ90rdjr+z2RJiQ9KFr1wE0PpTyaCwe
+						frAx6OG9Pg0vYb1EbdTU21fgFnsuTk6/w4GqN96zO08NjQIDAQABoz4wPDAbBgNV
+						HREEFDASghB3aXN0ZXN0LnVhcmsuZWR1MB0GA1UdDgQWBBSWamWvJ0vbvcoeSDNQ
+						nEEwxPD0zTANBgkqhkiG9w0BAQUFAAOCAQEAL16UX6F80HS7Z1fy+ODA5b+7Tuwa
+						MhPakGhgiPBHP21tIQF70yr4R5Wn64Dc2BKs6xqHiT6qZ3G9QgfR2LrMdH8gU7mI
+						P0bAvPnGT9hOL88S12b5t92oUNqR/UMrGAd4jO1lwgdR1e0yi5jMkPLRMgVrJD3n
+						bwcDVPUc5E5YFGLoiKnhcwwghCIX39kH6/RHHwCpEpRX7ZROtK7uNuDRDLZmgpq3
+						saedJ3GLuFKJzAZ+dHWFmDhcwjJ7uW/FbfWMYa/k4+ocYpc179+XHu4DtqC5fHQy
+						lo2xCGWKbScWnhsF6bx2GDETf8Y1kpHMbZHpj2xQMc22hAMQgFDmXmLn5w==
+					</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+		</md:KeyDescriptor>
+		<md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/Artifact/SOAP" index="1"/>
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SLO/SOAP"/>
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SLO/Redirect"/>
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SLO/POST"/>
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SLO/Artifact"/>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SAML2/POST" index="1"/>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SAML2/Artifact" index="3"/>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SAML2/ECP" index="4"/>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SAML/POST" index="5"/>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/SAML/Artifact" index="6"/>
+	</md:SPSSODescriptor>
+</md:EntityDescriptor>
