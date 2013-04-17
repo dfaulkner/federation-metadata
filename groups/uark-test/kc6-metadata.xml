@@ -1,0 +1,72 @@
+<!--
+This is example metadata only. Do *NOT* supply it as is without review,
+and do *NOT* provide it in real time to your partners.
+ -->
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_f0bab15628dba2ed43809b7c7041896fab868264" entityID="https://kc6.uark.edu/shibboleth">
+
+  <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+  </md:Extensions>
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://kc6.uark.edu/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://kc6.uark.edu/Shibboleth.sso/Login" index="1"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>https://kc6.uark.edu/shibboleth</ds:KeyName>
+        <ds:KeyName>kc6.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=kc6.uark.edu</ds:X509SubjectName>
+          <ds:X509Certificate>MIIDDjCCAfagAwIBAgIJAMsIMnEVKUU/MA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDGtjNi51YXJrLmVkdTAgFw0xMzA0MTcxNTMzNThaGA8yMTEzMDMyNDE1MzM1
+OFowFzEVMBMGA1UEAxMMa2M2LnVhcmsuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAqS7twk9/CBgEegOeKp4CNAMFIUduXGNrcn4ci+S7MFst4Az6
+yfGubNzjW824nSXGNVHnkoR3EXGJcp1tPYQGIa4GuZSQjbQJ7Shc7hIi6GJK0omx
+FHLwkC7qq5niXnDW3bSn58UvyEd3YUsgvSxv19lZWQ45M1X54v5hISPdf+3V9iKQ
+cwtd18js/461JyjVZqgs5cNN3o9CyGyQNG24Cx+8LDfj/+5GWk9EAcFZc/9q3XIx
+JgHcI8wJ2eps+BvnaPWN7CV2B5XEY7gzgftgOgV7JWAFflnwOrumNIkGSiO1duGp
+O4WuPWdNHFGwekEc+0GCi4uHp/vgefl9X45/KQIDAQABo1swWTA4BgNVHREEMTAv
+ggxrYzYudWFyay5lZHWGH2h0dHBzOi8va2M2LnVhcmsuZWR1L3NoaWJib2xldGgw
+HQYDVR0OBBYEFLEEsT5qr0DnBtCKiIdwsxMzEof9MA0GCSqGSIb3DQEBBQUAA4IB
+AQA9P2bJSCRSk967GCQmMhbCXszyoVyVMLAz1wZLJrVt1f2EV+DgnEGdAJbL3qrz
+f23xMBBKPjrlD5y3QZ2iqduIINprOt63MVSfy/+dfp3CxL6UXH7EMNOow2Ow2/+W
+ml6jR5SxdGdcaPKhZaLgPE1S1VnFhTAWIouOFHMcxW4yRWrXFz0tK73qvxCMKjD5
+Nez1/SRDgNHpR36Kz19fRLIoj9klIDSXuiGRZB+9F0lSV4cj/YxtfTeFx+At7nnE
+TuRgpMo5T98QN0OG8ylKwlV3LKl0Di+SF9vZLH5MLbofbWmAn/YjFLJrOhWpxcUQ
+arXoABsbvnOPyOO59gj9JNmy
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://kc6.uark.edu/Shibboleth.sso/Artifact/SOAP" index="1"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://kc6.uark.edu/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://kc6.uark.edu/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kc6.uark.edu/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://kc6.uark.edu/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://kc6.uark.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://kc6.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://kc6.uark.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://kc6.uark.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://kc6.uark.edu/Shibboleth.sso/SAML/POST" index="5"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://kc6.uark.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+  </md:SPSSODescriptor>
+
+</md:EntityDescriptor>
