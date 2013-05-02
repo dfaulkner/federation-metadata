@@ -1,4 +1,4 @@
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_ad4036b70082e07ce1e66b9edf8028582d0a4da9" entityID="https://wistest.uark.edu/itsforms/shibboleth">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_5ca9664cdd0b0e07450c179cddd49228592831a1" entityID="https://wistest.uark.edu/itsforms/shibboleth">
 	<md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
 		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
 		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
