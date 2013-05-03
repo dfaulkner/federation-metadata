@@ -1,0 +1,46 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" entityID="offcampushousing.uark.edu">
+  <md:Extensions>
+      <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+        <mdui:DisplayName xml:lang="en">Off Campus Housing</mdui:DisplayName>
+        <mdui:InformationURL xml:lang="en">http://offcampushousing.uark.edu/help</mdui:InformationURL>
+        <mdui:Logo height="578" width="400" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
+      </mdui:UIInfo>
+  </md:Extensions>
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIEtzCCA5+gAwIBAgIJAM+zAn2sNDsRMA0GCSqGSIb3DQEBBQUAMIGYMQswCQYDVQQGEwJVUzERMA8GA1UECBMIVmlyZ2luaWExETAPBgNVBAcTCFJpY2htb25kMRwwGgYDVQQKExNPZmYgQ2FtcHVzIFBhcnRuZXJzMQswCQYDVQQLEwJJVDENMAsGA1UEAxMEb2NwMTEpMCcGCSqGSIb3DQEJARYaY2xheUBvZmZjYW1wdXNwYXJ0bmVycy5jb20wHhcNMTEwNTI3MTg1NDIyWhcNMjEwNTI2MTg1NDIyWjCBmDELMAkGA1UEBhMCVVMxETAPBgNVBAgTCFZpcmdpbmlhMREwDwYDVQQHEwhSaWNobW9uZDEcMBoGA1UEChMTT2ZmIENhbXB1cyBQYXJ0bmVyczELMAkGA1UECxMCSVQxDTALBgNVBAMTBG9jcDExKTAnBgkqhkiG9w0BCQEWGmNsYXlAb2ZmY2FtcHVzcGFydG5lcnMuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtklpwvD4Dx4/n5Uw87IztH9sCDR/ICnuCGe5OSmDMd2Wf07hnt/uuKGL533XRFkcPfnJHAsB3p66q/kmABRjwSLNrJEWN5hlTKmj9dHP6TYiMD8QzPwxBoCEs5od8MnkZQuA1EaytbvKTT0ZKD/2cyINf7nEVn1ZAiRO9WzTF1L8r8OBWtvfOHJhcs2eG/NFvRWtyRJhcQdSye+bdNhFKvUe5nq3FLhO81gv4Y4lN1OKLCcR52YmbvDQBlOabsNQmI39GWScqMDR7WbaDBPbk4rTavk16V43oQ8gVcmtXJvxIgyXqoppBlUh+Q0+SB/TdEvDY9EcuaQl67f4sLq28wIDAQABo4IBADCB/TAdBgNVHQ4EFgQUXPPQatieVgxjycvMfVpmr6U5VgQwgc0GA1UdIwSBxTCBwoAUXPPQatieVgxjycvMfVpmr6U5VgShgZ6kgZswgZgxCzAJBgNVBAYTAlVTMREwDwYDVQQIEwhWaXJnaW5pYTERMA8GA1UEBxMIUmljaG1vbmQxHDAaBgNVBAoTE09mZiBDYW1wdXMgUGFydG5lcnMxCzAJBgNVBAsTAklUMQ0wCwYDVQQDEwRvY3AxMSkwJwYJKoZIhvcNAQkBFhpjbGF5QG9mZmNhbXB1c3BhcnRuZXJzLmNvbYIJAM+zAn2sNDsRMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEFdnQkIOx0f4KFD2hp5IPneYs9Fge4SDIP8Nm2SxKj8F0g6Vwjdpdmg84UxQyFtwZWXHJpfPYtfhbfKvNcqmzkWtjipOga59u6FWWTweH++GVx94PF/mmRsGOAbeqpaYPboWyaTSLELUNZs/zXw2Nd6VY4kXN469+jCAeW3kthVPOrc8Bpx7bj3yL+rkLq1f7SlNbQPgHDjpdUB/UQdgzC2oSbo026Noo/pFVJ5lunwr79dHZi9AF9LxDwzG24HQ5HXHV6WvpOld9T+8iRcD3mr6QxayWw7xQXO3bkNXX8u0ZD2CGEhVJcYWAnwHl4THMRtEwIGqIh7nAyIE40DTYU=</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>MIIEtzCCA5+gAwIBAgIJAM+zAn2sNDsRMA0GCSqGSIb3DQEBBQUAMIGYMQswCQYDVQQGEwJVUzERMA8GA1UECBMIVmlyZ2luaWExETAPBgNVBAcTCFJpY2htb25kMRwwGgYDVQQKExNPZmYgQ2FtcHVzIFBhcnRuZXJzMQswCQYDVQQLEwJJVDENMAsGA1UEAxMEb2NwMTEpMCcGCSqGSIb3DQEJARYaY2xheUBvZmZjYW1wdXNwYXJ0bmVycy5jb20wHhcNMTEwNTI3MTg1NDIyWhcNMjEwNTI2MTg1NDIyWjCBmDELMAkGA1UEBhMCVVMxETAPBgNVBAgTCFZpcmdpbmlhMREwDwYDVQQHEwhSaWNobW9uZDEcMBoGA1UEChMTT2ZmIENhbXB1cyBQYXJ0bmVyczELMAkGA1UECxMCSVQxDTALBgNVBAMTBG9jcDExKTAnBgkqhkiG9w0BCQEWGmNsYXlAb2ZmY2FtcHVzcGFydG5lcnMuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtklpwvD4Dx4/n5Uw87IztH9sCDR/ICnuCGe5OSmDMd2Wf07hnt/uuKGL533XRFkcPfnJHAsB3p66q/kmABRjwSLNrJEWN5hlTKmj9dHP6TYiMD8QzPwxBoCEs5od8MnkZQuA1EaytbvKTT0ZKD/2cyINf7nEVn1ZAiRO9WzTF1L8r8OBWtvfOHJhcs2eG/NFvRWtyRJhcQdSye+bdNhFKvUe5nq3FLhO81gv4Y4lN1OKLCcR52YmbvDQBlOabsNQmI39GWScqMDR7WbaDBPbk4rTavk16V43oQ8gVcmtXJvxIgyXqoppBlUh+Q0+SB/TdEvDY9EcuaQl67f4sLq28wIDAQABo4IBADCB/TAdBgNVHQ4EFgQUXPPQatieVgxjycvMfVpmr6U5VgQwgc0GA1UdIwSBxTCBwoAUXPPQatieVgxjycvMfVpmr6U5VgShgZ6kgZswgZgxCzAJBgNVBAYTAlVTMREwDwYDVQQIEwhWaXJnaW5pYTERMA8GA1UEBxMIUmljaG1vbmQxHDAaBgNVBAoTE09mZiBDYW1wdXMgUGFydG5lcnMxCzAJBgNVBAsTAklUMQ0wCwYDVQQDEwRvY3AxMSkwJwYJKoZIhvcNAQkBFhpjbGF5QG9mZmNhbXB1c3BhcnRuZXJzLmNvbYIJAM+zAn2sNDsRMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEFdnQkIOx0f4KFD2hp5IPneYs9Fge4SDIP8Nm2SxKj8F0g6Vwjdpdmg84UxQyFtwZWXHJpfPYtfhbfKvNcqmzkWtjipOga59u6FWWTweH++GVx94PF/mmRsGOAbeqpaYPboWyaTSLELUNZs/zXw2Nd6VY4kXN469+jCAeW3kthVPOrc8Bpx7bj3yL+rkLq1f7SlNbQPgHDjpdUB/UQdgzC2oSbo026Noo/pFVJ5lunwr79dHZi9AF9LxDwzG24HQ5HXHV6WvpOld9T+8iRcD3mr6QxayWw7xQXO3bkNXX8u0ZD2CGEhVJcYWAnwHl4THMRtEwIGqIh7nAyIE40DTYU=</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://offcampushousing.uark.edu/simplesaml/module.php/saml/sp/saml2-logout.php/uark"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://offcampushousing.uark.edu/simplesaml/module.php/saml/sp/saml2-acs.php/uark" index="0"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://offcampushousing.uark.edu/simplesaml/module.php/saml/sp/saml1-acs.php/uark" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://offcampushousing.uark.edu/simplesaml/module.php/saml/sp/saml2-acs.php/uark" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://offcampushousing.uark.edu/simplesaml/module.php/saml/sp/saml1-acs.php/uark/artifact" index="3"/>
+  <md:AttributeConsumingService index="1">
+    <md:ServiceName xml:lang="en">Off Campus Housing</md:ServiceName>
+    <md:ServiceDescription xml:lang="en">University of Arkansas Off Campus Housing Service helps students find housing and roommates.</md:ServiceDescription>
+    <md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:mace:dir:attribute-def:eduPersonPrincipalName" NameFormat="urn:mace:shibboleth:1.0:attributeNamespace:uri"/>
+    <md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+  </md:AttributeConsumingService>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">Off Campus Partners</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">Off Campus Parnters</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">http://offcampuspartners.com/</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Clay</md:GivenName>
+    <md:SurName>vanSchalkwijk</md:SurName>
+    <md:EmailAddress>clay@offcampuspartners.com</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor>
