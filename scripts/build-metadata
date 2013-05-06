@@ -19,11 +19,11 @@ SYSLOG_FACILITY=user
 VERBOSE=
 VERBOSE_SYSLOG=
 
-## Define the period for which the metadata is considered 
-## valid. This can be any date string that can be accepted
-## by the date(1) -d argument. 
+## Define the number of days for which the metadata is
+## considered valid. (positive integer)
 
-VALID="1 Month"
+VALID=28
+export VALID
 
 ## Define the period for the metadata will be cached for. 
 ## This provides a hint to the IdP/SP as to how often to 
@@ -68,7 +68,8 @@ ID=$(date -u "+UARK%Y%m%dT%H%M%S")
 ## The validUntil attribute is the latest time for which a
 ## given metadata file is considered valid.
 
-VALID_UNTIL=$(date -u -d "$VALID" "+%Y-%m-%dT%H:%M:%SZ")
+VALID_UNTIL=`perl -e 'use POSIX qw(strftime); print strftime "%Y-%m-%dT%H:%M:%SZ", localtime(time() + 3600*24*$ENV{"VALID"});'`
+
 
 ## Path to xmlsectool
 XMLSECTOOL=scripts/xmlsectool/xmlsectool.sh
