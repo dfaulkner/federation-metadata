@@ -1,0 +1,71 @@
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_96f5153dd74d19c641c72a45d75a557a" entityID="https://php.uark.edu/shibboleth">
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>php.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=php.uark.edu</ds:X509SubjectName>
+          <ds:X509Certificate>MIIC6zCCAdOgAwIBAgIJAKmdIq9cp4jJMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDHBocC51YXJrLmVkdTAeFw0xMTEyMDUxNzE1MTlaFw0yMTEyMDIxNzE1MTla
+MBcxFTATBgNVBAMTDHBocC51YXJrLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALGdTHnExnbe/PX52O7oBOmrmoEtrm3Z+0cJURp6ZtqdT1Bfs4i1
+DABuFsd4rBBIODCp2Ue88fK1V1oylelFwPZVPpk3W9wg5EWXXpXJ1wEvgn/VEDVO
+43EkSBn/pq6dfrMe2HifapgwiPim5RsoIsz700ghMdhdJjqtQ9yJNsfwYNi4Tz0Q
+K+p68uMH5lcnM3GojvHB2p44tarkCudgIF85mJ4+2nMNVYlse8vc8bAwEyqNHB9N
+KV21WKBEpjYpDvUla1WHfEhp9K/WoDClMpiC/hWSQMQ2Q1hTUoMHybWSoEWMWCsr
+LMaVgXjoHolZTRv3mbwvTMLZMyx/M9ZJkj0CAwEAAaM6MDgwFwYDVR0RBBAwDoIM
+cGhwLnVhcmsuZWR1MB0GA1UdDgQWBBT/2r+SkRSqKTXFcF9A+5VGvjJqIDANBgkq
+hkiG9w0BAQUFAAOCAQEAjhQWgqT7MIMGk0i8fHR75XgDJBpl2kKQNizBeH2X+Pro
+V/78ULEW0uXVYcWKJ2vUw/YBtWaCeBUJlouOC6MHDmA1zq72w4wFErO97hjT9XTv
+M4NABPbsHsf4EAbK9g4ChqpuRPasIJCJ8Ff+jw7uD3epkZyDXS6f6KbuMKnlw05y
+wFe9HV6PECV1NQKskjlY/71zH4OtVk3pntREejB9cr8HSn6ytMDTKVCeumx0WL5b
+2ZXN/Qu7qp5I4/Xuin/UWJKrjQ83YajpCEtRL2cSR6LZZXLrYOZBkEQ1rFhNFm8n
++o92XrOIw649naC+plT8i2d/MB9bV5I3g/5h0VN1Og==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:KeyDescriptor use="encryption">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>php.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=php.uark.edu</ds:X509SubjectName>
+          <ds:X509Certificate>MIIC6zCCAdOgAwIBAgIJAKmdIq9cp4jJMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDHBocC51YXJrLmVkdTAeFw0xMTEyMDUxNzE1MTlaFw0yMTEyMDIxNzE1MTla
+MBcxFTATBgNVBAMTDHBocC51YXJrLmVkdTCCASIwDQYJKoZIhvcNAQEBBQADggEP
+ADCCAQoCggEBALGdTHnExnbe/PX52O7oBOmrmoEtrm3Z+0cJURp6ZtqdT1Bfs4i1
+DABuFsd4rBBIODCp2Ue88fK1V1oylelFwPZVPpk3W9wg5EWXXpXJ1wEvgn/VEDVO
+43EkSBn/pq6dfrMe2HifapgwiPim5RsoIsz700ghMdhdJjqtQ9yJNsfwYNi4Tz0Q
+K+p68uMH5lcnM3GojvHB2p44tarkCudgIF85mJ4+2nMNVYlse8vc8bAwEyqNHB9N
+KV21WKBEpjYpDvUla1WHfEhp9K/WoDClMpiC/hWSQMQ2Q1hTUoMHybWSoEWMWCsr
+LMaVgXjoHolZTRv3mbwvTMLZMyx/M9ZJkj0CAwEAAaM6MDgwFwYDVR0RBBAwDoIM
+cGhwLnVhcmsuZWR1MB0GA1UdDgQWBBT/2r+SkRSqKTXFcF9A+5VGvjJqIDANBgkq
+hkiG9w0BAQUFAAOCAQEAjhQWgqT7MIMGk0i8fHR75XgDJBpl2kKQNizBeH2X+Pro
+V/78ULEW0uXVYcWKJ2vUw/YBtWaCeBUJlouOC6MHDmA1zq72w4wFErO97hjT9XTv
+M4NABPbsHsf4EAbK9g4ChqpuRPasIJCJ8Ff+jw7uD3epkZyDXS6f6KbuMKnlw05y
+wFe9HV6PECV1NQKskjlY/71zH4OtVk3pntREejB9cr8HSn6ytMDTKVCeumx0WL5b
+2ZXN/Qu7qp5I4/Xuin/UWJKrjQ83YajpCEtRL2cSR6LZZXLrYOZBkEQ1rFhNFm8n
++o92XrOIw649naC+plT8i2d/MB9bV5I3g/5h0VN1Og==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://php.uark.edu/Shibboleth.sso/Artifact/SOAP" index="1"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://php.uark.edu/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://php.uark.edu/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://php.uark.edu/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://php.uark.edu/Shibboleth.sso/SLO/Artifact"/>
+    <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://php.uark.edu/Shibboleth.sso/NIM/SOAP"/>
+    <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://php.uark.edu/Shibboleth.sso/NIM/Redirect"/>
+    <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://php.uark.edu/Shibboleth.sso/NIM/POST"/>
+    <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://php.uark.edu/Shibboleth.sso/NIM/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://php.uark.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="http://php.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://php.uark.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="http://php.uark.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="http://php.uark.edu/Shibboleth.sso/SAML/POST" index="5"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="http://php.uark.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+  </md:SPSSODescriptor>
+
+</md:EntityDescriptor>
