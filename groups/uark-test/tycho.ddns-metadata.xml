@@ -4,6 +4,31 @@
     <md:Extensions>
       <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="http://tycho.ddns.uark.edu/Shibboleth.sso/Login"/>
     </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>hnrctycho</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=hnrctycho</ds:X509SubjectName>
+          <ds:X509Certificate>MIIC4jCCAcqgAwIBAgIJANwtQmMnCIdxMA0GCSqGSIb3DQEBBQUAMBQxEjAQBgNV
+BAMTCWhucmN0eWNobzAeFw0xMzA2MTMxMzM4MDRaFw0yMzA2MTExMzM4MDRaMBQx
+EjAQBgNVBAMTCWhucmN0eWNobzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMFbwZkToLH6QK6vt5i5B6z+SCfhP+uO1AJfsn/k1rjFcfqZ1a/tLW7qYl0N
+scu+s8y4P14RudQJKUc2DYVuyPPrjXA/Fh0XC60XTXzP3rWLgaFxzBkWJ3ZApoEJ
+kjtN7O5W5p4e+Tbd/Q7DkIH3K+NhJt3HNKvjiuiCwOH+0vTNzB1jK95pDODm/oGx
+eKTQJUbnDxTH/Vn0cEfxMkQiDazEN9lU+SvPx0IgMtESKb11JFoLgXIHgUXIYGKp
+xLPdMcVnaYON+KDUV6cN9CajwOY5t587DOBK0bUMFc9nSHxWkvrKFXxr5jyFDF6E
+MTMp5yQATJsCA887TKKNCyfbIAUCAwEAAaM3MDUwFAYDVR0RBA0wC4IJaG5yY3R5
+Y2hvMB0GA1UdDgQWBBSpke20VEmfGKPB6HOXU1pUxDIx0jANBgkqhkiG9w0BAQUF
+AAOCAQEArmM6ZLIffykv2xtQzNhPIXh28GTjqNjxzot3pVFCzVgHB1+5sBk568bF
+DM+HyvwqHolW9L0IIlYVLXhyMD0Z95qO50neGIWAqASFOAGSP0Yvwi7guirvTCRe
+SlVpp4gBUDhfLz8vHcMKIT2Fl3NNFHXHvSA8RSWRrh4Ive7dAsckUcKKiCp6ilLF
+1zSSK0XAcsJeMMEOHSjAbt4nh902WZi6A/Ajx1igciAW+bfjcd6diBllMMU8x3m7
+S405SAGjhQEUTk1rLCv/Cjqlowko6Ass8qKYILe9zlIhwNEpkXWgzomohq3sx3om
+ajR0KTLgFC6LenY7qWZFnJchY9H/9A==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
     <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://tycho.ddns.uark.edu/Shibboleth.sso/Artifact/SOAP" index="0"/>
     <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://tycho.ddns.uark.edu/Shibboleth.sso/SLO/SOAP"/>
     <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://tycho.ddns.uark.edu/Shibboleth.sso/SLO/Redirect"/>
