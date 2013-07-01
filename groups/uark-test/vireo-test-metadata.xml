@@ -1,0 +1,90 @@
+<!--
+This is example metadata only. Do *NOT* supply it as is without review,
+and do *NOT* provide it in real time to your partners.
+ -->
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_535f8178cd27524b0c6591bd8ffdfefcdd469ab6" entityID="https://dtst.uark.edu/vireo/shibboleth">
+
+  <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+  </md:Extensions>
+
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="http://dtst.uark.edu/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="http://dtst.uark.edu/Shibboleth.sso/Login" index="1"/>
+      <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+        <mdui:DisplayName xml:lang="en">Vireo ETD at University of Arkansas, Fayetteville</mdui:DisplayName>
+        <mdui:Logo height="578" width="400" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
+      </mdui:UIInfo>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:KeyName>dtst.uark.edu</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=dtst.uark.edu</ds:X509SubjectName>
+          <ds:X509Certificate>MIIC7jCCAdagAwIBAgIJANV97q24YflOMA0GCSqGSIb3DQEBBQUAMBgxFjAUBgNV
+BAMTDWR0c3QudWFyay5lZHUwHhcNMTMwMTE3MTYxODQyWhcNMjMwMTE1MTYxODQy
+WjAYMRYwFAYDVQQDEw1kdHN0LnVhcmsuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAuTUyzZ1cMM4OU1AhpjUokJPGbkYlms7DdsP8Q0goUHVT9jiM
+0NeuZotFp7hekuBpaygNxgmklcGZHC3/ONNEGCnNGs4/H9PQ5Hfk3SkZeUWmxtjb
+C5s701/FXSjRSk7VHl6x6763VW4RAEh3LSP8XtLIBMT0OXSFDCqX92S++Qhht6UJ
+AC0/JbS7iAZX20LEr05oMOTonHJSQgg6kZ4pnyf4cFHgTuVcALxplaBkaM+4J9H5
+SHNnID6HrFtvoFkCjxhGXi0n2fUi+pDwfTlpBUHfdi3IHKQifQ+AHnPzMS56pwSl
+/H+UE8YiOTGm50cFg0Xi2EsNL0HH0hwmkbVFGwIDAQABozswOTAYBgNVHREEETAP
+gg1kdHN0LnVhcmsuZWR1MB0GA1UdDgQWBBQXj+8Oc6SQF9wqcrObpC19ALRVHzAN
+BgkqhkiG9w0BAQUFAAOCAQEABnvszoPVlYNhi+8GricGRlvMViFqQ7B9CFL7kE5G
+CTjq/5+luY6HAgzwl9wkCM5AWAMNgTP9KsitvQClOQLAtDlSnL5OYpEpn/Qu+1JX
+swq36mBMl7/v+88IALA7rtGtxHVxyCxii3T1TrCvoTZGyQQwRaa9+mvUJdY9mMM8
+ojFc+rqwpYYRPadf0UAZnGCDmlQWu+uqIiT74OQzfO6LEElZmkNBvvIXQoWi/Y2E
+4FYvHjcYtg9WjCiYowQT6Thqlei3HIhXu5MdHSKl+dh7Im1B5i4SC676FX3RkT72
+ydozFwE5XKcZnVjCnUdvI4EPkwHyo7R3GIK4AyCtgsiI0Q==
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+    </md:KeyDescriptor>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://dtst.uark.edu/Shibboleth.sso/Artifact/SOAP" index="1"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://dtst.uark.edu/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://dtst.uark.edu/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://dtst.uark.edu/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://dtst.uark.edu/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://dtst.uark.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="http://dtst.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://dtst.uark.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="http://dtst.uark.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="http://dtst.uark.edu/Shibboleth.sso/SAML/POST" index="5"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="http://dtst.uark.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+
+    <md:AttributeConsumingService index="1">
+      <md:ServiceName xml:lang="en">Vireo ETD Submission System</md:ServiceName>
+      <md:ServiceDescription xml:lang="en">ETD submission system to archive undergraduate theses.</md:ServiceDescription>
+      <md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:mace:dir:attribute-def:eduPersonPrincipalName" NameFormat="urn:mace:shibboleth:1.0:attributeNamespace:uri"/>
+      <md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
+    </md:AttributeConsumingService>
+
+  </md:SPSSODescriptor>
+  <Organization>
+      <OrganizationName xml:lang="en">University of Arkansas</OrganizationName>
+      <OrganizationDisplayName xml:lang="en">University of Arkansas</OrganizationDisplayName>
+      <OrganizationURL xml:lang="en">http://www.uark.edu/</OrganizationURL>
+  </Organization>
+  <ContactPerson contactType="technical">
+      <GivenName>Diwakar Timilsina</GivenName>
+      <EmailAddress>diwakar@uark.edu</EmailAddress>
+  </ContactPerson>
+</md:EntityDescriptor>
