@@ -2,7 +2,7 @@
 This is example metadata only. Do *NOT* supply it as is without review,
 and do *NOT* provide it in real time to your partners.
  -->
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_535f8178cd27524b0c6591bd8ffdfefcdd469ab6" entityID="https://dtst.uark.edu/vireo/shibboleth">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_7f943405f071097c0e0cf4a43ede4f10c4cadc99" entityID="https://dtst.uark.edu/shibboleth">
 
   <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
     <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
@@ -20,8 +20,8 @@ and do *NOT* provide it in real time to your partners.
 
   <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
     <md:Extensions>
-      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="http://dtst.uark.edu/Shibboleth.sso/Login"/>
-      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="http://dtst.uark.edu/Shibboleth.sso/Login" index="1"/>
+      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://dtst.uark.edu/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://dtst.uark.edu/Shibboleth.sso/Login" index="1"/>
       <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
         <mdui:DisplayName xml:lang="en">Vireo ETD at University of Arkansas, Fayetteville</mdui:DisplayName>
         <mdui:Logo height="578" width="400" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
@@ -58,17 +58,17 @@ ydozFwE5XKcZnVjCnUdvI4EPkwHyo7R3GIK4AyCtgsiI0Q==
       <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
       <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
     </md:KeyDescriptor>
-    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://dtst.uark.edu/Shibboleth.sso/Artifact/SOAP" index="1"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://dtst.uark.edu/Shibboleth.sso/SLO/SOAP"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://dtst.uark.edu/Shibboleth.sso/SLO/Redirect"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://dtst.uark.edu/Shibboleth.sso/SLO/POST"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://dtst.uark.edu/Shibboleth.sso/SLO/Artifact"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://dtst.uark.edu/Shibboleth.sso/SAML2/POST" index="1"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="http://dtst.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://dtst.uark.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="http://dtst.uark.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="http://dtst.uark.edu/Shibboleth.sso/SAML/POST" index="5"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="http://dtst.uark.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dtst.uark.edu/Shibboleth.sso/Artifact/SOAP" index="1"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://dtst.uark.edu/Shibboleth.sso/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://dtst.uark.edu/Shibboleth.sso/SLO/Redirect"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dtst.uark.edu/Shibboleth.sso/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://dtst.uark.edu/Shibboleth.sso/SLO/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dtst.uark.edu/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://dtst.uark.edu/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://dtst.uark.edu/Shibboleth.sso/SAML2/Artifact" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://dtst.uark.edu/Shibboleth.sso/SAML2/ECP" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://dtst.uark.edu/Shibboleth.sso/SAML/POST" index="5"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://dtst.uark.edu/Shibboleth.sso/SAML/Artifact" index="6"/>
 
     <md:AttributeConsumingService index="1">
       <md:ServiceName xml:lang="en">Vireo ETD Submission System</md:ServiceName>
@@ -76,7 +76,7 @@ ydozFwE5XKcZnVjCnUdvI4EPkwHyo7R3GIK4AyCtgsiI0Q==
       <md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:mace:dir:attribute-def:eduPersonPrincipalName" NameFormat="urn:mace:shibboleth:1.0:attributeNamespace:uri"/>
       <md:RequestedAttribute FriendlyName="eduPersonPrincipalName" Name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:uri"/>
     </md:AttributeConsumingService>
-
+    
   </md:SPSSODescriptor>
   <Organization>
       <OrganizationName xml:lang="en">University of Arkansas</OrganizationName>
