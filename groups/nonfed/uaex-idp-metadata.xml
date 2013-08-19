@@ -1,0 +1,122 @@
+<EntityDescriptor entityID="https://idp.uaex.edu/idp/shibboleth"
+                  xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+                  xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+                  xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <IDPSSODescriptor errorURL="https://idp.uaex.edu/identity/feedback.htm" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">idp.uaex.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+
+MIIDmDCCAoACCQCtel/2JmOm9DANBgkqhkiG9w0BAQUFADCBjTEVMBMGA1UEAwwM
+aWRwLnVhZXguZWR1MT4wPAYDVQQKDDVVbml2ZXJzaXR5IG9mIEFya2Fuc2FzIENv
+b3BlcmF0aXZlIEV4dGVuc2lvbiBTZXJ2aWNlczELMAkGA1UEBhMCVVMxETAPBgNV
+BAgMCEFya2Fuc2FzMRQwEgYDVQQHDAtMaXR0bGUgUm9jazAeFw0xMzAyMDgxMjIx
+MzVaFw0xNDAyMDgxMjIxMzVaMIGNMRUwEwYDVQQDDAxpZHAudWFleC5lZHUxPjA8
+BgNVBAoMNVVuaXZlcnNpdHkgb2YgQXJrYW5zYXMgQ29vcGVyYXRpdmUgRXh0ZW5z
+aW9uIFNlcnZpY2VzMQswCQYDVQQGEwJVUzERMA8GA1UECAwIQXJrYW5zYXMxFDAS
+BgNVBAcMC0xpdHRsZSBSb2NrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAlB7zHuv2H77sOPGMfeJvgVKBrt538jGex0+8wAzAahZxmrjxo5HnMcgovUE/
+dmfItLIsFC3s94j+WWnfMbzVQm02TVoam267F5GKem0as/Pm/ry1btFTD9Jnj2OX
+JV0cBuVizfTy9qRu8ydQI2OyQGPD3HPGpxYz4wNCKMsMU6GugJu3wTElaQEA2WGX
+AJV1y0z+0lWMNPP9ZLFgFXn2qOC3far84Z9mEhkNENZcf8mPf8vJvgNjtDrpcVLK
+Okfncq2CsX7quv3MailV++MgvTNdZLljRLqnT8OMYRwuKZMNzMXvr8AvuzHS4TVG
+QA0e+1WsMVCpA8cO798Jmub+wQIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQB6og+d
+lbbGwfBs98M/zvO09OoFHoJ+WQ+9EvArGLuNJyrG/4icLhb7RY+8kJUU7qghF2Jq
+pCsfL8WfKaFuDhct/BiC+MRRX3xhM7wp4+Lpjzv2hBnpvo2WtJzi0xcbX79DTUOu
+vG0NGJ4KcOAK0aykrMrTSowGSnGdeuGlF0U+4EcAmnYh0JFtYstA8YCh6m6W+Eib
+H5ogY8LVOjvv1c6hEO8khIxKTXUFJ7gKjnT1RxyG0kvqS4P55ZPjTbwkDWDBBNYk
+tqAERtGoSohbErFyMATqZBPqTyb8oKeqIfmzNLfMBVE5aOc7Babyde8hTFShQ5GB
+YL3Kl6VCSUFqg93Q
+
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding"
+                                   Location="https://idp.uaex.edu:9443/idp/profile/SAML1/SOAP/ArtifactResolution" 
+                                   index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                                   Location="https://idp.uaex.edu:9443/idp/profile/SAML2/SOAP/ArtifactResolution" 
+                                   index="2"/>
+                                   
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" 
+                             Location="https://idp.uaex.edu/idp/profile/Shibboleth/SSO" />
+        
+        <SingleSignOnService Binding="urn:mace:shibboleth:2.0:profiles:AuthnRequest" 
+                             Location="https://idp.uaex.edu/idp/profile/SAML2/Unsolicited/SSO" />
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" 
+                             Location="https://idp.uaex.edu/idp/profile/SAML2/POST/SSO" />
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" 
+                             Location="https://idp.uaex.edu/idp/profile/SAML2/POST-SimpleSign/SSO" />
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" 
+                             Location="https://idp.uaex.edu/idp/profile/SAML2/Redirect/SSO" />
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">idp.uaex.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+
+MIIDmDCCAoACCQCtel/2JmOm9DANBgkqhkiG9w0BAQUFADCBjTEVMBMGA1UEAwwM
+aWRwLnVhZXguZWR1MT4wPAYDVQQKDDVVbml2ZXJzaXR5IG9mIEFya2Fuc2FzIENv
+b3BlcmF0aXZlIEV4dGVuc2lvbiBTZXJ2aWNlczELMAkGA1UEBhMCVVMxETAPBgNV
+BAgMCEFya2Fuc2FzMRQwEgYDVQQHDAtMaXR0bGUgUm9jazAeFw0xMzAyMDgxMjIx
+MzVaFw0xNDAyMDgxMjIxMzVaMIGNMRUwEwYDVQQDDAxpZHAudWFleC5lZHUxPjA8
+BgNVBAoMNVVuaXZlcnNpdHkgb2YgQXJrYW5zYXMgQ29vcGVyYXRpdmUgRXh0ZW5z
+aW9uIFNlcnZpY2VzMQswCQYDVQQGEwJVUzERMA8GA1UECAwIQXJrYW5zYXMxFDAS
+BgNVBAcMC0xpdHRsZSBSb2NrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAlB7zHuv2H77sOPGMfeJvgVKBrt538jGex0+8wAzAahZxmrjxo5HnMcgovUE/
+dmfItLIsFC3s94j+WWnfMbzVQm02TVoam267F5GKem0as/Pm/ry1btFTD9Jnj2OX
+JV0cBuVizfTy9qRu8ydQI2OyQGPD3HPGpxYz4wNCKMsMU6GugJu3wTElaQEA2WGX
+AJV1y0z+0lWMNPP9ZLFgFXn2qOC3far84Z9mEhkNENZcf8mPf8vJvgNjtDrpcVLK
+Okfncq2CsX7quv3MailV++MgvTNdZLljRLqnT8OMYRwuKZMNzMXvr8AvuzHS4TVG
+QA0e+1WsMVCpA8cO798Jmub+wQIDAQABMA0GCSqGSIb3DQEBBQUAA4IBAQB6og+d
+lbbGwfBs98M/zvO09OoFHoJ+WQ+9EvArGLuNJyrG/4icLhb7RY+8kJUU7qghF2Jq
+pCsfL8WfKaFuDhct/BiC+MRRX3xhM7wp4+Lpjzv2hBnpvo2WtJzi0xcbX79DTUOu
+vG0NGJ4KcOAK0aykrMrTSowGSnGdeuGlF0U+4EcAmnYh0JFtYstA8YCh6m6W+Eib
+H5ogY8LVOjvv1c6hEO8khIxKTXUFJ7gKjnT1RxyG0kvqS4P55ZPjTbwkDWDBBNYk
+tqAERtGoSohbErFyMATqZBPqTyb8oKeqIfmzNLfMBVE5aOc7Babyde8hTFShQ5GB
+YL3Kl6VCSUFqg93Q
+
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" 
+                          Location="https://idp.uaex.edu:9443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+        
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+                          Location="https://idp.uaex.edu:9443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+        
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+		<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+        
+    </AttributeAuthorityDescriptor>
+    
+</EntityDescriptor>    
