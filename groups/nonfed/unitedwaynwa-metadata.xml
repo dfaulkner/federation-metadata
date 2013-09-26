@@ -63,3 +63,68 @@
 		</md:AttributeConsumingService>	
 	</md:SPSSODescriptor>
 </md:EntityDescriptor>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_c7abcc6c7748d399f15875b09be1f7588e783b36" entityID="https://agency.unitedwaynwa.org/nwa.jsp">
+	<md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+		<alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+		<alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+	</md:Extensions>
+	<md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
+		<md:Extensions>
+			<mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+				<mdui:DisplayName xml:lang="en">United Way of Northwest Arkansas</mdui:DisplayName>
+				<mdui:InformationURL xml:lang="en">http://www.unitedwaynwa.org/</mdui:InformationURL>
+				<mdui:Logo height="43" width="363" xml:lang="en">http://www.unitedwaynwa.org/sites/unitedwaynwa.org/themes/unitedway/images/logo-left.png</mdui:Logo>
+			</mdui:UIInfo>
+		</md:Extensions>
+		<md:KeyDescriptor>
+			<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+				<ds:KeyName>agency.unitedwaynwa.org</ds:KeyName>
+				<ds:X509Data>
+					<ds:X509SubjectName>CN=https://agency.unitedwaynwa.org/</ds:X509SubjectName>
+					<ds:X509Certificate>MIIDRDCCAiwCCQCJfD9JozDsjDANBgkqhkiG9w0BAQUFADBkMQswCQYDVQQGEwJV
+						UzERMA8GA1UECAwIQXJrYW5zYXMxFzAVBgNVBAoMDlVuaXRlZCBXYXkgTldBMSkw
+						JwYDVQQDDCBodHRwczovL2FnZW5jeS51bml0ZWR3YXlud2Eub3JnLzAeFw0xMzA5
+						MjQxOTU0NTJaFw0yMzA5MjIxOTU0NTJaMGQxCzAJBgNVBAYTAlVTMREwDwYDVQQI
+						DAhBcmthbnNhczEXMBUGA1UECgwOVW5pdGVkIFdheSBOV0ExKTAnBgNVBAMMIGh0
+						dHBzOi8vYWdlbmN5LnVuaXRlZHdheW53YS5vcmcvMIIBIjANBgkqhkiG9w0BAQEF
+						AAOCAQ8AMIIBCgKCAQEAxQWk6/syCtmVqOS1TiKEd/haSKG9afRX9G5a2e2frEU6
+						6kBWe4+zZDEUGoMi300S/tAjj4oD23mmj+ZkZ6GaH8xB/7Z5G4awF9cvZXON9ClY
+						jsZuVUFSKpW12Smfa0fUcekdV/784sYFOIVqfUqTHUefkxzBAJlHSrP7QztBI1fl
+						fo/G9Nmt8ChsF39BVP+JSkiBrwkWCiKVgWBVgoRUFXB6Zw9DCPex+QuBW3zg5JYM
+						PaxVqB7GOuj/+YZuo/mqeE0hhBHl7oW5fDkMMLisJJeGajNBK1H9EG28Y9sUzTWT
+						R5QrVGPUE3432h5Ekxijmxh4rSQkIhSOOpjq55YqDwIDAQABMA0GCSqGSIb3DQEB
+						BQUAA4IBAQCanIDtY4W8d4Zwofd70vGcttUY5uRphTUaR9o/I/PtUu31CFJgL9fi
+						hq9qlXBQjjCqvCHlzRDnuL6BB4Pta87AKfSyIV2Pk/T3rQxaqTQkkIEawTQMSM7i
+						ESPm9NhJapa3+dLbP/YDP7ypZtZqLXIypvG3bx/Qj1Qr2YuHkfQxBrv1/5rtxHum
+						k2gBGxp69f0TN18p2llSf8hMcChMKUkkQG5exbRczjt8nN34pRU2y4kUiF9qgXVe
+						biCn2KiPr6vFFE++vXGr+3DWsFqiUJaPR1YxbPjriomHlb6LQZHU6KAvIH3Fzle4
+						++7y/E7/JQ38+BlPpraFZ/RRM0N10JLa
+					</ds:X509Certificate>
+				</ds:X509Data>
+			</ds:KeyInfo>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+		</md:KeyDescriptor>
+
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://agency.unitedwaynwa.org/nwa.jsp" index="1"/>
+		<md:AttributeConsumingService index="1">
+			<md:ServiceName xml:lang="en">United Way of Northwest Arkansas</md:ServiceName>
+			<md:ServiceDescription xml:lang="en">United Way Pledge Drive Donation Site</md:ServiceDescription>
+			<md:RequestedAttribute FriendlyName="accountNumber" Name="accountNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+			<md:RequestedAttribute FriendlyName="ORG_EMPLOYEEID" Name="ORG_EMPLOYEEID" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+		</md:AttributeConsumingService>	
+	</md:SPSSODescriptor>
+</md:EntityDescriptor>
