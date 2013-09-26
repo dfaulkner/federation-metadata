@@ -1,4 +1,4 @@
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_c7abcc6c7748d399f15875b09be1f7588e783b36" entityID="https://agency.unitedwaynwa.org/nwa.jsp">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_c7abcc6c7748d399f15875b09be1f7588e783b36" entityID="https://agency.unitedwaynwa.org/Begin.jsp">
 	<md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
 		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
 		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
@@ -54,7 +54,7 @@
 			<md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
 		</md:KeyDescriptor>
 
-		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://agency.unitedwaynwa.org/nwa.jsp" index="1"/>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://agency.unitedwaynwa.org/Begin.jsp" index="1"/>
 		<md:AttributeConsumingService index="1">
 			<md:ServiceName xml:lang="en">United Way of Northwest Arkansas</md:ServiceName>
 			<md:ServiceDescription xml:lang="en">United Way Pledge Drive Donation Site</md:ServiceDescription>
