@@ -1,4 +1,4 @@
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_c7abcc6c7748d399f15875b09be1f7588e783b36" entityID="https://agency.unitedwaynwa.org/Begin.jsp">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_a7f608d1c067a159f6f6c4a8f7d6436f" entityID="https://agency.unitedwaynwa.org/Begin.jsp">
 	<md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
 		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
 		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
@@ -63,7 +63,7 @@
 		</md:AttributeConsumingService>	
 	</md:SPSSODescriptor>
 </md:EntityDescriptor>
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_c7abcc6c7748d399f15875b09be1f7588e783b36" entityID="https://agency.unitedwaynwa.org/nwa.jsp">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_f044a221ed2696ec1a5666181523592f" entityID="https://agency.unitedwaynwa.org/nwa.jsp">
 	<md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
 		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
 		<alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
