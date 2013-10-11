@@ -2,7 +2,7 @@
 This is example metadata only. Do *NOT* supply it as is without review,
 and do *NOT* provide it in real time to your partners.
  -->
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_657cf08a6730ac2e70ce094b8262cdf79ce25120" entityID="https://sp.example.org/shibboleth">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_2c51dc8a71016e7cb0a227bfc9761b49a855d66a" entityID="https://kc7.uark.edu/shibboleth">
 
   <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
     <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
@@ -29,23 +29,23 @@ and do *NOT* provide it in real time to your partners.
         <ds:KeyName>kc7.uark.edu</ds:KeyName>
         <ds:X509Data>
           <ds:X509SubjectName>CN=kc7.uark.edu</ds:X509SubjectName>
-          <ds:X509Certificate>MIIDDjCCAfagAwIBAgIJAO6dzY5SjQEnMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
-BAMTDGtjNy51YXJrLmVkdTAgFw0xMzEwMDkyMTQ4NDdaGA8yMTEzMDkxNTIxNDg0
-N1owFzEVMBMGA1UEAxMMa2M3LnVhcmsuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
-AQ8AMIIBCgKCAQEAqogSyoXLjPkl6An+jB7AhBc9gBRcxrdPue/j0aQFWkN3XIZr
-GZIA9g1JfqJeZYC2sq0E7rz8l0ydBQs9PAJBW0kTG1ce2eBfoieQZyFalk7iH7R8
-5wsCaEI5v5raqWw5Htkk2xxUDoM+hr4RNIEygqr2r6bPM8EPKTMhcRwDEfqTZWta
-YuIHHmiNIk0KMAfH3vKI8fOVsxcfpKy98Na9L7NmW6aOaP6OXjhwYe1TjsJLCzn5
-VdWYqNYg/y7jDAIYc0QfYDSwAud3IH9JhaPu2G+rWtJbfUia7VLjp13lqg7DJ0tA
-ZUm3Z2JDTR44mJTfpM8D+aU1hLcqGsVLNKcYpQIDAQABo1swWTA4BgNVHREEMTAv
+          <ds:X509Certificate>MIIDDjCCAfagAwIBAgIJAO5BI5yhoNjaMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
+BAMTDGtjNy51YXJrLmVkdTAgFw0xMzEwMTExNDA5MDJaGA8yMTEzMDkxNzE0MDkw
+MlowFzEVMBMGA1UEAxMMa2M3LnVhcmsuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEArAoJtvy0N1ArKPw4B4Rhl7R3FDUBQD6LimihXqdYULvj/cp7
+FL7u7KeymvZeygEimV0tpZjzKka8a3Tn+g8pvlBWzDVVfpTnt++bVSZnuOrK3Nw/
+uPN4XZI+WCWzBMjD1qM2WWThc7IMX8012JjOMbWNSdGNx1XhzhLpbqbxDwPy90q7
+bijw3lgfSHCCOq+d2bfNFnA0p7txXm4J0nWLU2KMv8TLlI/iBwu+waiUIxBnoqDt
+682a2/b2GT7YK/JB+fyGdRzjGxHZQrb8PkDDZUh0lydVKkMIB54+Pks1fPUvjbia
+nxsPuZlyrtH0N23BTZPMguTNKBU+4FWe8k9EUwIDAQABo1swWTA4BgNVHREEMTAv
 ggxrYzcudWFyay5lZHWGH2h0dHBzOi8va2M3LnVhcmsuZWR1L3NoaWJib2xldGgw
-HQYDVR0OBBYEFI8E/AQeAntWKj0i3fduiKemCWh+MA0GCSqGSIb3DQEBBQUAA4IB
-AQBjeCCkV8WXuB2LQIL3RWp/ilOe0qgRTjJwHSRFdXozfBjKmETuvA8OUKWJjsQq
-Y7laCJZMo0ZkNmAeKuedRRE+eQgc0+g3DR49YtVxlrWyckCnruivy2W9IzQ3D/lT
-noWeV2Amm6mmD7EbhK8B2cWwQnb4P51yAIkj78aLXJz+qI28AXrJaWqyb+5g5wgD
-4ZDyDpNm+eyA99mZ6drsq3Ii78OBtZravW7iAgFT1qPsz6abhYOYbXtXsZF2gC3m
-5gA5L4z42Z/u9U4S8d2RKQvJ7FcewNPUgOQzoL7N+XiUCDtsXzSglL0GNFeN+8T1
-U4NflwLncQ4ZxbewIWq2OGRc
+HQYDVR0OBBYEFEHADQiKeNQr/A4wAx/SWflBdvr4MA0GCSqGSIb3DQEBBQUAA4IB
+AQCZRhd/dy0i+BZmnEj/BkSNVIx7GAWEyK72rhCn2R1quUaVah3pFd0a3QVxwqwW
+bhE3rtALUUT/ytbSKF75t6CAucRIcepUNHIlYVpIFo4pUYxeq93N1SXfF1d0++VP
+NmiWY+FA4VJ5piudZ5QopFDf+GOYwcNvGA2rRunAgpzZ25BQ0jqE055feGzHiCEM
+lHToELMFK0ypyKVYBbdmiBTOhtoF2Tqjt2ZfcVpB1CFiJ9+b8MQ+edpOBQ4AgLB/
+44xfdzGceV4DoXQagSSfekf8wzYPDDfpJsjczxytoPVB4Ed82J1ryNw8OLa4Ggqq
+9mD+f2ri/DpCY6d2aGGukc3h
 </ds:X509Certificate>
         </ds:X509Data>
       </ds:KeyInfo>
