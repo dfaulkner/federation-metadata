@@ -11,13 +11,23 @@ IAM=`basename $0`
 ## Adjust variables here to control things like how long
 ## the metadata is valid for.
 
-## set the syslog facility 
-SYSLOG_FACILITY=user
+## set LOG_LEVEL to control the level of detail in logging.
+## available levels are the same as syslog(3):
+## (debug info notice warning err crit alert emerg)
+## default=notice set to null to disable all logging
+LOG_LEVEL=notice
+if [[ $@ =~ "--verbose" ]]; then
+	LOG_LEVEL=debug
+	for i in "$@"; do
+		[[ $i =~ "--verbose=" ]] && LOG_LEVEL=${i/#--verbose=/}
+	done
+fi
 
-## set VERBOSE for verbose console logging (stderrr)
-## set VERBOSE_SYSLOG for verbose syslog messages
-VERBOSE=
-VERBOSE_SYSLOG=
+## set the syslog facilty to choose where log messages are
+## sent via syslog. Same labels as syslog(3) and logger(1).
+## unset, or set null to disable syslog, leaving console
+## logging active. Default=user
+SYSLOG_FACILITY=user
 
 ## Define the number of days for which the metadata is
 ## considered valid. (positive integer)
@@ -75,30 +85,21 @@ VALID_UNTIL=`perl -e 'use POSIX qw(strftime); print strftime "%Y-%m-%dT%H:%M:%SZ
 XMLSECTOOL=scripts/xmlsectool/xmlsectool.sh
 
 log() {
-	local logLevel=$1
-	local logMessage="$2"
+	local severityList=(debug info notice warning err crit alert emerg)
+	local facilty=${SYSLOG_FACILITY-}
+	local severity=${1-notice}
+	shift
+	local message=$@
+	local logging_on=
 
-	case "$logLevel" in
-		emerg|alert|crit|err|warning|notice)
-			echo -ne "$IAM ($logLevel): " 1>&2
-			echo -e "$logMessage" 1>&2
-			logger -p $SYSLOG_FACILITY.$logLevel -t $IAM $logMessage || true
-			;;
-		info|debug)
-			if [ -n "$VERBOSE" ]; then
-				echo -ne "$IAM ($logLevel): " 1>&2
-				echo -e "$logMessage" 1>&2
-			fi
-			if [ -n "$VERBOSE_SYSLOG" ]; then
-				logger -p $SYSLOG_FACILITY.$logLevel -t $IAM $logMessage || true
-			fi
-			;;
-		*)
-			echo -ne "$IAM (err): " 1>&2
-			echo -e "log level $logLevel doesn't exist." 1>&2
-			exit 3
-			;;
-	esac
+	for i in ${severityList[@]}; do
+		[ $i = "$LOG_LEVEL" ] && logging_on=true
+		if [ -n "$logging_on" -a "$i" = "$severity" ]; then
+			echo -e "$IAM ($severity): $message" 1>&2
+			[ -n "$facilty" ] && logger -p $facilty.$severity -t $IAM $message || true
+			break
+		fi
+	done	
 }
 
 
@@ -159,7 +160,8 @@ cd `dirname "$0"`
 cd ..
 
 ## make sure we have the latest changes from the repository
-git pull
+## (unless we say not to)
+[[ $@ =~ "--nopull" ]] || git pull
 
 ## make sure that all the working directories exist
 
