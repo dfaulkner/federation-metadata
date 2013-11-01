@@ -22,6 +22,11 @@ and do *NOT* provide it in real time to your partners.
     <md:Extensions>
       <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://learnrazorgrant.uark.edu/Shibboleth.sso/Login"/>
       <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://learnrazorgrant.uark.edu/Shibboleth.sso/Login" index="1"/>
+      <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+        <mdui:DisplayName xml:lang="en">Learn Razorgrant</mdui:DisplayName>
+        <mdui:InformationURL xml:lang="en">http://learnrazorgrant.uark.edu/</mdui:InformationURL>
+        <mdui:Logo height="43" width="363" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
+      </mdui:UIInfo>
     </md:Extensions>
     <md:KeyDescriptor>
       <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
