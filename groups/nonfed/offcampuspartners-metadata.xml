@@ -2,7 +2,7 @@
   <md:Extensions>
       <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
         <mdui:DisplayName xml:lang="en">Off Campus Housing</mdui:DisplayName>
-        <mdui:InformationURL xml:lang="en">http://offcampushousing.uark.edu/help</mdui:InformationURL>
+        <!-- <mdui:InformationURL xml:lang="en">http://offcampushousing.uark.edu/help</mdui:InformationURL> -->
         <mdui:Logo height="578" width="400" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
       </mdui:UIInfo>
   </md:Extensions>

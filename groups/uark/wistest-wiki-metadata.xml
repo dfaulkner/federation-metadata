@@ -18,7 +18,7 @@
 			<idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://wistest.uark.edu/wiki/Shibboleth.sso/Login" index="1"/>
 			<mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
 				<mdui:DisplayName xml:lang="en">WIS Second Application with override</mdui:DisplayName>
-				<mdui:InformationURL xml:lang="en">https://wistest.uark.edu/sp-info/</mdui:InformationURL>
+				<!-- <mdui:InformationURL xml:lang="en">https://wistest.uark.edu/wiki/</mdui:InformationURL> -->
 				<mdui:Logo height="578" width="400" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
 			</mdui:UIInfo>
 		</md:Extensions>

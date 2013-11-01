@@ -19,7 +19,7 @@
       <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="http://birthday.uark.edu/Shibboleth.sso/Login"/>
       <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
 			<mdui:DisplayName xml:lang="en">Wooo Pig Sooie eCards</mdui:DisplayName>
-			<mdui:InformationURL xml:lang="en">https://wistest.uark.edu/sp-info/</mdui:InformationURL>
+			<mdui:InformationURL xml:lang="en">http://birthday.uark.edu/</mdui:InformationURL>
 			<mdui:Logo height="578" width="400" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
 		</mdui:UIInfo>
     </md:Extensions>

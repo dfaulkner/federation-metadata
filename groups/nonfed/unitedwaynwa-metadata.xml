@@ -16,7 +16,7 @@
 		<md:Extensions>
 			<mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
 				<mdui:DisplayName xml:lang="en">United Way of Northwest Arkansas</mdui:DisplayName>
-				<mdui:InformationURL xml:lang="en">http://www.unitedwaynwa.org/</mdui:InformationURL>
+				<!-- <mdui:InformationURL xml:lang="en">http://www.unitedwaynwa.org/</mdui:InformationURL> -->
 				<mdui:Logo height="43" width="363" xml:lang="en">http://www.unitedwaynwa.org/sites/unitedwaynwa.org/themes/unitedway/images/logo-left.png</mdui:Logo>
 			</mdui:UIInfo>
 		</md:Extensions>
@@ -60,7 +60,7 @@
 			<md:ServiceDescription xml:lang="en">United Way Pledge Drive Donation Site</md:ServiceDescription>
 			<md:RequestedAttribute FriendlyName="accountNumber" Name="accountNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
 			<md:RequestedAttribute FriendlyName="ORG_EMPLOYEEID" Name="ORG_EMPLOYEEID" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
-		</md:AttributeConsumingService>	
+		</md:AttributeConsumingService>
 	</md:SPSSODescriptor>
 </md:EntityDescriptor>
 <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_f044a221ed2696ec1a5666181523592f" entityID="https://agency.unitedwaynwa.org/nwa.jsp">
@@ -125,6 +125,6 @@
 			<md:ServiceDescription xml:lang="en">United Way Pledge Drive Donation Site</md:ServiceDescription>
 			<md:RequestedAttribute FriendlyName="accountNumber" Name="accountNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
 			<md:RequestedAttribute FriendlyName="ORG_EMPLOYEEID" Name="ORG_EMPLOYEEID" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
-		</md:AttributeConsumingService>	
+		</md:AttributeConsumingService>
 	</md:SPSSODescriptor>
 </md:EntityDescriptor>
