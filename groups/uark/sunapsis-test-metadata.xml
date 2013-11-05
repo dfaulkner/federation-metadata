@@ -28,10 +28,11 @@ and do *NOT* provide it in real time to your partners.
       <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="http://isslinktest.uark.edu/Shibboleth.sso/Login"/>
       <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="http://isslinktest.uark.edu/Shibboleth.sso/Login" index="1"/>
       <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
-        <mdui:DisplayName xml:lang="en">SUNAPSIS Test/mdui:DisplayName>
+        <mdui:DisplayName xml:lang="en">SUNAPSIS Test</mdui:DisplayName>
         <mdui:InformationURL xml:lang="en">http://isslinktest.uark.edu/</mdui:InformationURL>
         <mdui:Logo height="43" width="363" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
-      </mdui:UIInfo>    </md:Extensions>
+      </mdui:UIInfo>
+    </md:Extensions>
     <md:KeyDescriptor>
       <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
         <ds:KeyName>inpr-sun-tst.uark.edu</ds:KeyName>

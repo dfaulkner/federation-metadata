@@ -31,7 +31,8 @@ and do *NOT* provide it in real time to your partners.
         <mdui:DisplayName xml:lang="en">SUNAPSIS</mdui:DisplayName>
         <mdui:InformationURL xml:lang="en">http://isslink.uark.edu/</mdui:InformationURL>
         <mdui:Logo height="43" width="363" xml:lang="en">http://styleguides.uark.edu/Graphic_Element.jpg</mdui:Logo>
-      </mdui:UIInfo>    </md:Extensions>
+      </mdui:UIInfo>
+    </md:Extensions>
     <md:KeyDescriptor>
       <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
         <ds:KeyName>inpr-sun-tst.uark.edu</ds:KeyName>
